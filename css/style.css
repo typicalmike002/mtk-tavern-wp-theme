@@ -1,0 +1,25 @@
+/*!
+Theme Name: MTK Tavern
+Theme URI: n/a
+Author: typicalmike002
+Author URI: n/a
+Version: 0.1
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: mtk-tavern
+*/
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "mtk-tavern",
+  "description": "A theme for the mtktavern.com website.",
+  "main": "Gruntfile.js",
+  "authors": [
+    "typicalmike002"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "mtktavern.com",
+  "private": true
+}
