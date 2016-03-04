@@ -8,5 +8,8 @@
   "license": "MIT",
   "moduleType": [],
   "homepage": "mtktavern.com",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "jquery-2.2.1.min": "http://code.jquery.com/jquery-2.2.1.min.js"
+  }
 }

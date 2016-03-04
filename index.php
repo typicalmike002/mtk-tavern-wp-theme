@@ -1,13 +1,12 @@
 <?php
 /**
- * The main template file.
+ * The main template file.  Wraps the header and footer around the WordPress Loop.
  *
  *
  * @package  WordPress
  * @subpackage  MTK Tavern
  * @version 1.0
  */
-
 get_header(); ?>
 
 	<?php if ( have_posts() ) : ?>

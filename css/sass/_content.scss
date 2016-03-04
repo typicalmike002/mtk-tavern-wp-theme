@@ -1,0 +1,16 @@
+#main {
+	max-width: $mobileWidth;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: $tabletWidth){
+	#main {
+		max-width: $tabletWidth;
+	}
+}
+
+@media only screen and (min-width: $desktopWidth){
+	#main {
+		max-width: $desktopWidth;
+	}
+}

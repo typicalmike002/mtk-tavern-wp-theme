@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 			},
 			scss: {
 				files: ['css/sass/*.scss', 'css/sass/**/*.scss'],
-				tasks: ['compass', 'autoprefixer', 'cssmin', 'gitadd'],
+				tasks: ['compass', 'autoprefixer', 'combine_mq', 'cssmin', 'gitadd'],
 				options: {
 					spawn: false
 				}
@@ -74,8 +74,8 @@ module.exports = function(grunt) {
 				beautify: true
 			},
 			main: {
-				src: 'style.css',
-				dest: 'style.css'
+				src: 'css/style.css',
+				dest: 'css/style.css'
 			}
 		},
 
@@ -110,7 +110,10 @@ module.exports = function(grunt) {
 					name: 'config',
 					optimize: 'none', // or 'uglify'
 					paths: {
-						main: 'modules/main'
+						main: 'modules/main',
+						jquery: 'bower_components/jquery-2.2.1.min/jquery-2.2.1.min',
+						lazyload: 'bower_components/jquery_lazyload/jquery.lazyload',
+						bxslider: 'bower_components/jquery.bxslider/jquery.bxslider.min'
 					},
 					out: 'js/optimize.min.js'
 				}

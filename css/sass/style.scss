@@ -9,8 +9,6 @@ License URI: https://opensource.org/licenses/MIT
 Text Domain: mtktavern
 */
 
-
-
 //--------Viewpoint Widths--------//
 @-webkit-viewport{width:device-width;}
 @-moz-viewport{width:device-width;}
@@ -18,15 +16,30 @@ Text Domain: mtktavern
 @-o-viewport{width:device-width;}
 @viewport{width:device-width;}
 
-
-
-
 //--------Comapss Libraries--------//
 @import "compass/css3";
-
-
-
 
 //--------Globals--------//
 @import "variables";
 @import "mixins";
+
+//--------Structure--------//
+@import "foundation";
+@import "grid";
+
+//--------Content--------//
+@import "header";
+
+@import "content";
+@import "templates/front-page";
+@import "templates/calendar";
+
+@import "footer";
+
+
+@media only all {
+
+	//----Enhanced Structure----//
+	@import "enhanced";
+
+}

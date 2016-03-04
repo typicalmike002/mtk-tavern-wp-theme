@@ -10,4 +10,4 @@ requirejs.config({
 	baseUrl: dir.path
 });
 
-requirejs(['require', 'main']);
+requirejs(['require', 'jquery', 'lazyload', 'bxslider', 'main']);

@@ -11,7 +11,6 @@
 
 
 
-
 /**
  * Set up theme defaults and registers various WordPress features.
  * 
@@ -40,7 +39,6 @@ add_action( 'after_setup_theme', 'mtk_tavern_setup' );
 
 
 
-
 /**
  * Injects scripts and styles into the theme's header 
  * to optomize rendering.  Sets up requirejs by providing
@@ -54,49 +52,62 @@ function inject_scripts() {
 
 	global $wp_styles, $wp_scripts;
 
-	$js_dir = get_template_directory_uri() . '/js';
-	$js_libs = $js_dir . '/bower_components';
-
 	// Registers style and adds the version number to the url for caching.
 	wp_register_style( 'style', get_stylesheet_uri(), false, '1.0.0' );
 	wp_enqueue_style( 'style' );
 
+	// Deregisters WordPress's local copy of jQuery:
+	wp_deregister_script( 'jquery' );
+
+	$js_dir = get_template_directory_uri() . '/js';
+	$js_libs = $js_dir . '/bower_components';
+
 	// Registers requirejs.
-	wp_enqueue_script( 'requirejs', $js_libs . '/requirejs/require.min.js', '', '', true );
+	wp_enqueue_script( 'requirejs', $js_libs . '/requirejs/require.min.js', '', '', true);
 	wp_register_script( 'optimize', $js_dir . '/optimize.min.js', 'requirejs', '', true );
 
 	// Passes theme's directory path to requirejs.
 	wp_localize_script( 'optimize', 'dir', array(
-		'path' => $js_dir,
+		'path' => $js_dir
 	));
 
 	wp_enqueue_script( 'optimize', '', '', '', true );
+
+	// Script used to get a facebook share button.
+	wp_register_script( 'facebook', $js_dir . '/facebook.js', '', '', false );
+	wp_enqueue_script( 'facebook', '', '', '', false ); 
+
 }
-add_action( 'wp_enqueue_script', 'inject_scripts' );
+add_action( 'wp_enqueue_scripts', 'inject_scripts' );
 
 
 
+if ( is_admin() ) {
+	/**
+	 * Loads custom styles into the wp-admin panal.  Most of these are used
+	 * inside the Templates Class below for displaying backend forms.
+	*/
+	function admin_stylesheet() {
+		wp_register_script( 'admin-styles', get_template_directory_uri() . '/css/admin-styles.css', false, '1.0.0' );
+		wp_enqueue_style( 'admin-styles' );
+	}
+	add_action( 'admin_enqueue_scripts', 'admin_stylesheet' );
+}
 
-/**
- * Class: Title
- * 
- * @since MTK Tavern 1.0
- */
 
-include( 'classes/Title.php' );
-$title = new Title( 10, 2 );
-
-
+function test_footer(){
+	echo '<p>Test Passed</p>';
+}
+add_action('wp_footer', 'your_function', 100);
 
 
 /**
  * Class: Templates
- * Description: classes/Templates.php
  * 
  * @since MTK Tavern 1.0
  */
 
-include( 'classes/Templates.php' );
+include( 'admin_templates/Templates.php' );
 $template_controls = new Templates();
 
 ?>

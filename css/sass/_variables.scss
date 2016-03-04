@@ -1,3 +1,29 @@
-%primaryFont {
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-}
+//--------Global-Variables--------//
+$hundred : 100%;
+
+//--------Colors--------//
+$color1 : #000; //Black
+$color2 : #fff; //White
+$color3 : #00f; //Blue
+$color4 : #ff0; //Yellow
+
+//--------MTK Brand Colors--------//
+$colorPrimary : #e82607; //Red rgb(232,38,7);
+$colorSecondary : #f1eacb; // Vanilla rgb(241,234,203);
+$colorBrandLighter : #eedf84; // Yellow rgb(238,223,132);
+$colorBrandLight : #f2d112; //Yellow-Orange rgb(230,159,35);
+$colorBrandMiddle : #e69f23; // Orange rgb(230,159,35);
+$colorBrandDark : #d62128; // Brick rgb(214,33,40);
+
+//--------Media Queries--------//
+$mobileWidth : 350px;
+$tabletWidth : 640px;
+$desktopWidth : 845px;
+
+//--------Font Sizes--------//
+$baseSize : 1em;
+$mobileFont : $baseSize * 0.8; // Equals 30%
+$tabletFont : $baseSize * 0.9; // Equals 50%
+$desktopFont : $baseSize; 	   // Equals 100%
+
+$lineHeight : 110%;

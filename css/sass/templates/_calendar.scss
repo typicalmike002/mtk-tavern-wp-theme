@@ -1,0 +1,89 @@
+section.calendar {
+
+	padding-bottom: 1em;
+	
+	.row_align-top {
+		align-items: flex-start;
+	}
+
+	.column {
+		padding: 0 1em;
+	}
+}
+
+section.event,
+section.event_coming-soon {
+	padding: 2em 0;
+
+	h2 {
+		margin: 0;
+	}
+
+	h2,h3 {
+		text-align: center;
+	}
+
+	h3 {
+		height: 50px;
+	}
+}
+
+section.event_description p {
+	margin: 0;
+	max-height: 325px;
+	overflow: hidden;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+section.event_date p {
+	text-align: center;
+}
+
+.event_details,
+.event_share {
+	@extend %navigationGradient;
+	border-radius: 1em;
+	width: 50%;
+	float: left;
+	margin: 0 1em;
+}
+
+.event-links_container {
+	display: flex;
+	justify-content: space-around;
+}
+
+a.event_link {
+	display: block;
+	padding: 0.5em;
+	font-weight: 800;
+	color: $colorSecondary;
+	text-align: center;
+}
+
+.event_coming-soon_image {
+	height: 325px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.event_image {
+	height: 225px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+// Override facebooks style for the share buttons //
+.event_share {
+
+}
+
+@media only screen and (min-width: $tabletWidth) {
+	.last_event {
+		width: 50%;
+		margin: 0 auto;
+	}
+}

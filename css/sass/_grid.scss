@@ -1,0 +1,38 @@
+//------------Grid------------//
+
+#wrap {
+	@extend %backgroundGradient;
+	background-color: $colorSecondary;
+	background-size: $hundred 215px;
+	padding: 0 1em;
+}
+
+@media only screen and (min-width: $tabletWidth) {
+
+	.gutters {
+		padding: 1em 0 0 1em;
+	}
+		
+	.row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0;
+		padding: 0;
+	}
+
+	.column {
+		flex: 1;
+		width: $hundred;
+	}
+
+	#wrap {
+		background-size: $hundred 175px;
+	}
+}
+
+@media only screen and (min-width: $desktopWidth) {
+	#wrap {
+		background-size: $hundred 225px;
+	}
+}
