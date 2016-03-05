@@ -29,19 +29,23 @@ Text Domain: mtktavern
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
-}/* line 9, sass/_mixins.scss */#wrap {
+}/* line 8, sass/_mixins.scss */h1,h2,h3,h4,h5 {
+  font-family: Bondoni MT, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+  font-style: normal;
+  font-weight: 800;
+}/* line 15, sass/_mixins.scss */#wrap {
   background: -webkit-radial-gradient(center 100%, ellipse, #f1eacb 0%, #f1eacb 79%, #f2d112 84%, #e69f23 90%, #d62128 94%, #d62128 100%);
   background: -moz-radial-gradient(center 100%, ellipse, #f1eacb 0%, #f1eacb 79%, #f2d112 84%, #e69f23 90%, #d62128 94%, #d62128 100%);
   background: -o-radial-gradient(center 100%, ellipse, #f1eacb 0%, #f1eacb 79%, #f2d112 84%, #e69f23 90%, #d62128 94%, #d62128 100%);
   background: radial-gradient(ellipse at center 100%, #f1eacb 0%, #f1eacb 79%, #f2d112 84%, #e69f23 90%, #d62128 94%, #d62128 100%);
   background-repeat: no-repeat;
-}/* line 22, sass/_mixins.scss */nav#navigation ul li,nav#navigation_mobile ul li,.event_details,.event_share {
+}/* line 28, sass/_mixins.scss */nav#navigation ul li,nav#navigation_mobile ul li,#about_navigation li,.event_details,.event_share {
   background: -webkit-gradient(linear, left top, left bottom, from(170Deg), color-stop(0%, #000000), color-stop(48%, #000000), color-stop(50%, #262626), to(#262626));
   background: -webkit-linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
   background: -moz-linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
   background: -o-linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
   background: linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
-}/* line 33, sass/_mixins.scss */button.mobile-icon_hamburger {
+}/* line 39, sass/_mixins.scss */button.mobile-icon_hamburger {
   width: 60px;
   height: 45px;
   position: relative;
@@ -55,7 +59,7 @@ Text Domain: mtktavern
   -o-transition: .3s ease-in;
   transition: .3s ease-in;
   cursor: pointer;
-}/* line 41, sass/_mixins.scss */button.mobile-icon_hamburger span {
+}/* line 47, sass/_mixins.scss */button.mobile-icon_hamburger span {
   display: block;
   position: absolute;
   height: 9px;
@@ -75,28 +79,28 @@ Text Domain: mtktavern
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
-}/* line 53, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(1) {
+}/* line 59, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(1) {
   top: 0;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -ms-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
-}/* line 58, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(2) {
+}/* line 64, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(2) {
   top: 18px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -ms-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
-}/* line 63, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(3) {
+}/* line 69, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(3) {
   top: 36px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -ms-transform-origin: left center;
   -o-transform-origin: left center;
   transform-origin: left center;
-}/* line 74, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(1) {
+}/* line 80, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -104,10 +108,10 @@ Text Domain: mtktavern
   transform: rotate(45deg);
   top: -3px;
   left: 8px;
-}/* line 79, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(2) {
+}/* line 85, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(2) {
   width: 0%;
   opacity: 0;
-}/* line 83, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(3) {
+}/* line 89, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -138,55 +142,57 @@ Text Domain: mtktavern
   outline: 0;
 }/* line 68, sass/_foundation.scss */a:focus img {
   border: 1px #e82607 solid;
-}/* line 76, sass/_foundation.scss */nav ul {
+}/* line 76, sass/_foundation.scss */h1,h2,h3,h4,h5 {
+  margin: 0;
+}/* line 87, sass/_foundation.scss */nav ul {
   list-style-type: none;
-}/* line 82, sass/_foundation.scss */img {
+}/* line 93, sass/_foundation.scss */img {
   border: 0;
-}/* line 89, sass/_foundation.scss */button,input,optgroup,select,textarea {
+}/* line 100, sass/_foundation.scss */button,input,optgroup,select,textarea {
   color: inherit;
   font: inherit;
   margin: 0;
-}/* line 99, sass/_foundation.scss */button {
+}/* line 110, sass/_foundation.scss */button {
   overflow: visible;
-}/* line 103, sass/_foundation.scss */button,select {
+}/* line 114, sass/_foundation.scss */button,select {
   text-transform: none;
-}/* line 108, sass/_foundation.scss */button,html input[type="button"],input[type="reset"],input[type="submit"] {
+}/* line 119, sass/_foundation.scss */button,html input[type="button"],input[type="reset"],input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer;
-}/* line 116, sass/_foundation.scss */button[disabled],html input[disabled] {
+}/* line 127, sass/_foundation.scss */button[disabled],html input[disabled] {
   cursor: default;
-}/* line 121, sass/_foundation.scss */button::-moz-focus-inner,input::-moz-focus-inner {
+}/* line 132, sass/_foundation.scss */button::-moz-focus-inner,input::-moz-focus-inner {
   border: 0;
   padding: 0;
-}/* line 127, sass/_foundation.scss */input {
+}/* line 138, sass/_foundation.scss */input {
   line-height: normal;
-}/* line 131, sass/_foundation.scss */input[type="checkbox"],input[type="radio"] {
+}/* line 142, sass/_foundation.scss */input[type="checkbox"],input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-}/* line 137, sass/_foundation.scss */input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
+}/* line 148, sass/_foundation.scss */input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
   height: auto;
-}/* line 142, sass/_foundation.scss */input[type="search"] {
+}/* line 153, sass/_foundation.scss */input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-}/* line 147, sass/_foundation.scss */fieldset {
+}/* line 158, sass/_foundation.scss */fieldset {
   border: 1px solid #BBB;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
-}/* line 153, sass/_foundation.scss */legend {
+}/* line 164, sass/_foundation.scss */legend {
   border: 0;
   padding: 0;
-}/* line 158, sass/_foundation.scss */textarea {
+}/* line 169, sass/_foundation.scss */textarea {
   overflow: auto;
-}/* line 162, sass/_foundation.scss */optgroup {
+}/* line 173, sass/_foundation.scss */optgroup {
   font-weight: bold;
-}/* line 167, sass/_foundation.scss */table {
+}/* line 178, sass/_foundation.scss */table {
   border-collapse: collapse;
   border-spacing: 0;
-}/* line 172, sass/_foundation.scss */td,th {
+}/* line 183, sass/_foundation.scss */td,th {
   padding: 0;
 }/* line 3, sass/_grid.scss */#wrap {
   background-color: #f1eacb;
@@ -250,11 +256,11 @@ Text Domain: mtktavern
   padding: 1em;
   margin: 2em 0;
   color: #f1eacb;
-}/* line 65, sass/_header.scss */nav#navigation ul li.current-menu-item a,nav#navigation_mobile ul li.current-menu-item a {
+}/* line 65, sass/_header.scss */nav#navigation ul li.current-menu-item a,nav#navigation_mobile ul li.current-menu-item a,nav#about_navigation li.current_page_item a {
   color: #f2d112;
-}/* line 70, sass/_header.scss */#mobile-icon {
+}/* line 71, sass/_header.scss */#mobile-icon {
   display: none;
-}/* line 74, sass/_header.scss */.mobile-menu {
+}/* line 75, sass/_header.scss */.mobile-menu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -270,28 +276,28 @@ Text Domain: mtktavern
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}/* line 80, sass/_header.scss */.mobile-menu_container {
+}/* line 81, sass/_header.scss */.mobile-menu_container {
   position: relative;
   z-index: 2;
-}/* line 85, sass/_header.scss */button.mobile-icon_hamburger {
+}/* line 86, sass/_header.scss */button.mobile-icon_hamburger {
   background: none;
   border: 0;
   padding: 0;
-}/* line 91, sass/_header.scss */button.mobile-icon_hamburger label {
+}/* line 92, sass/_header.scss */button.mobile-icon_hamburger label {
   display: block;
   width: 100%;
   height: 100%;
-}/* line 99, sass/_header.scss */address.address {
+}/* line 100, sass/_header.scss */address.address {
   font-style: initial;
   text-transform: uppercase;
-}/* line 103, sass/_header.scss */address.address p {
+}/* line 104, sass/_header.scss */address.address p {
   margin: 0.3em 0;
   font-size: 140%;
   text-align: left;
   font-weight: 800;
-}/* line 111, sass/_header.scss */.address_container {
+}/* line 112, sass/_header.scss */.address_container {
   width: 100%;
-}/* line 115, sass/_header.scss */.social-media_container {
+}/* line 116, sass/_header.scss */.social-media_container {
   max-width: 275px;
   margin: 0 auto;
   display: -webkit-box;
@@ -342,6 +348,39 @@ Text Domain: mtktavern
   padding-bottom: 1em;
 }/* line 45, sass/templates/_front-page.scss */.featured-event .column {
   padding: 0 1em;
+}/* line 1, sass/templates/_about.scss */section.about p {
+  text-align: justify;
+  text-justify: inter-word;
+}/* line 6, sass/templates/_about.scss */.gallery_image {
+  height: 225px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}/* line 13, sass/templates/_about.scss */.gallery_spacing {
+  margin: 0.5em;
+}/* line 16, sass/templates/_about.scss */.gallery_spacing a {
+  display: block;
+}/* line 21, sass/templates/_about.scss */#about_navigation {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}/* line 27, sass/templates/_about.scss */#about_navigation li {
+  margin: 1em auto;
+  display: inline-block;
+  width: 49%;
+  list-style-type: none;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}/* line 35, sass/templates/_about.scss */#about_navigation li a {
+  display: block;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: 800;
+  color: #f1eacb;
 }/* line 1, sass/templates/_calendar.scss */section.calendar {
   padding-bottom: 1em;
 }/* line 5, sass/templates/_calendar.scss */section.calendar .row_align-top {
@@ -415,7 +454,7 @@ Text Domain: mtktavern
 }/* line 10, sass/_footer.scss */#footer h2,#footer h3 {
   text-align: center;
   margin: 0;
-  padding: 0.5em 0;
+  font-size: 150%;
 }/* line 16, sass/_footer.scss */#footer p {
   margin: 0;
 }/* line 20, sass/_footer.scss */#footer .column {
@@ -503,11 +542,11 @@ Text Domain: mtktavern
     -moz-background-size: 100% 175px;
     -o-background-size: 100% 175px;
     background-size: 100% 175px;
-  }/* line 148, sass/_header.scss */  header#header {
+  }/* line 149, sass/_header.scss */  header#header {
     max-width: 640px;
-  }/* line 152, sass/_header.scss */  nav#navigation {
+  }/* line 153, sass/_header.scss */  nav#navigation {
     display: block;
-  }/* line 155, sass/_header.scss */  nav#navigation ul {
+  }/* line 156, sass/_header.scss */  nav#navigation ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -520,7 +559,7 @@ Text Domain: mtktavern
     justify-content: center;
     padding: 0;
     margin: 0 0.2em;
-  }/* line 161, sass/_header.scss */  nav#navigation ul li {
+  }/* line 162, sass/_header.scss */  nav#navigation ul li {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-box-flex: 1;
@@ -531,30 +570,30 @@ Text Domain: mtktavern
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     border-radius: 1em;
-  }/* line 167, sass/_header.scss */  nav#navigation ul li a {
+  }/* line 168, sass/_header.scss */  nav#navigation ul li a {
     display: block;
     padding: 0.5em;
     font-weight: 800;
     color: #f1eacb;
-  }/* line 177, sass/_header.scss */  nav#navigation_mobile {
+  }/* line 178, sass/_header.scss */  nav#navigation_mobile {
     display: none;
-  }/* line 181, sass/_header.scss */  .mobile-menu {
+  }/* line 182, sass/_header.scss */  .mobile-menu {
     display: initial;
-  }/* line 185, sass/_header.scss */  .logo_image {
+  }/* line 186, sass/_header.scss */  .logo_image {
     width: auto;
-  }/* line 189, sass/_header.scss */  .mobile-menu_container {
+  }/* line 190, sass/_header.scss */  .mobile-menu_container {
     display: none;
-  }/* line 193, sass/_header.scss */  .logo_image {
+  }/* line 194, sass/_header.scss */  .logo_image {
     height: 100px;
     background: url("images/logo-medium.png") no-repeat;
-  }/* line 198, sass/_header.scss */  address.address {
+  }/* line 199, sass/_header.scss */  address.address {
     border-top: 0.2em solid #000;
     border-bottom: 0.2em solid #000;
-  }/* line 202, sass/_header.scss */  address.address p {
+  }/* line 203, sass/_header.scss */  address.address p {
     text-align: right;
-  }/* line 207, sass/_header.scss */  .address_container {
+  }/* line 208, sass/_header.scss */  .address_container {
     width: 275px;
-  }/* line 211, sass/_header.scss */  .social-media_container {
+  }/* line 212, sass/_header.scss */  .social-media_container {
     margin: 0;
     display: initial;
     max-width: initial;
@@ -563,6 +602,25 @@ Text Domain: mtktavern
     max-width: 640px;
   }/* line 54, sass/templates/_front-page.scss */  .rotator ul.bxslider li {
     height: 325px;
+  }/* line 47, sass/templates/_about.scss */  #about_navigation {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }/* line 51, sass/templates/_about.scss */  #about_navigation li {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: block;
+    margin: 1em;
   }/* line 85, sass/templates/_calendar.scss */  .last_event {
     width: 50%;
     margin: 0 auto;
@@ -577,14 +635,14 @@ Text Domain: mtktavern
     -moz-background-size: 100% 225px;
     -o-background-size: 100% 225px;
     background-size: 100% 225px;
-  }/* line 221, sass/_header.scss */  header#header {
+  }/* line 222, sass/_header.scss */  header#header {
     max-width: 845px;
-  }/* line 225, sass/_header.scss */  .logo_image {
+  }/* line 226, sass/_header.scss */  .logo_image {
     height: 135px;
     background: url("images/logo-large.png") no-repeat;
-  }/* line 230, sass/_header.scss */  address.address p {
+  }/* line 231, sass/_header.scss */  address.address p {
     font-size: 175%;
-  }/* line 234, sass/_header.scss */  .address_container {
+  }/* line 235, sass/_header.scss */  .address_container {
     width: 420px;
   }/* line 13, sass/_content.scss */  #main {
     max-width: 845px;
@@ -594,16 +652,16 @@ Text Domain: mtktavern
 }
 
 @media only screen and (max-width: 640px) {
-/* line 124, sass/_header.scss */  nav#navigation_mobile {
+/* line 125, sass/_header.scss */  nav#navigation_mobile {
     opacity: 0;
     z-index: -1;
     -webkit-transition: z-index 0.3s step-end, opacity 0.3s ease-in;
     -moz-transition: z-index 0.3s step-end, opacity 0.3s ease-in;
     -o-transition: z-index 0.3s step-end, opacity 0.3s ease-in;
     transition: z-index 0.3s step-end, opacity 0.3s ease-in;
-  }/* line 129, sass/_header.scss */  nav#navigation_mobile a {
+  }/* line 130, sass/_header.scss */  nav#navigation_mobile a {
     pointer-events: none;
-  }/* line 134, sass/_header.scss */  #mobile-icon:checked +
+  }/* line 135, sass/_header.scss */  #mobile-icon:checked +
   nav#navigation_mobile {
     z-index: 1;
     opacity: 1;
@@ -611,7 +669,7 @@ Text Domain: mtktavern
     -moz-transition: z-index 0.3s step-start, opacity 0.3s ease-in;
     -o-transition: z-index 0.3s step-start, opacity 0.3s ease-in;
     transition: z-index 0.3s step-start, opacity 0.3s ease-in;
-  }/* line 140, sass/_header.scss */  #mobile-icon:checked +
+  }/* line 141, sass/_header.scss */  #mobile-icon:checked +
   nav#navigation_mobile a {
     pointer-events: auto;
   }

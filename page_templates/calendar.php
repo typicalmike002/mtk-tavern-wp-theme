@@ -7,9 +7,9 @@ Link : www.codeofaninja.com/2011/07/display-facebook-events-to-your-website.html
 */
 
 include dirname(__FILE__) . '/../classes/FacebookAPIConnect.php';
-$facebookAPI = new FacebookAPIConnect();
+$facebookAPIConnect = new FacebookAPIConnect();
 
-$obj = json_decode( $facebookAPI->json, true ); // Setting json_decode to true dumps everything into an array obj.
+$obj = $facebookAPIConnect->{'event_data'}();
 
 $event_count = count($obj['data']);
 
@@ -47,7 +47,7 @@ get_header(); ?>
 					</div>
 				</div>
 
-				<div class="row row_align-top gutters">
+				<div class="row gutters">
 					<div class="column">
 
 						<!-- Event Image -->
@@ -94,7 +94,7 @@ get_header(); ?>
 				<div class="row gutters">
 			<?php endif; ?>
 
-				<?php if ( $i != $event_count - 1 ) : ?>
+				<?php if ( $i != $event_count - 1 || $i % 2 == 0 ) : ?>
 					<div class="column">
 				<?php endif; ?>
 
@@ -156,7 +156,7 @@ get_header(); ?>
 						</div><!-- End "last_event" -->
 					<?php endif; ?>
 
-				<?php if ( $i != $event_count - 1 ) : ?>
+				<?php if ( $i != $event_count - 1 || $i % 2 == 0 ) : ?>
 					</div><!-- End "column" -->
 				<?php endif; ?>
 	

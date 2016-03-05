@@ -1,6 +1,6 @@
 <?php
 /**
- * Builds the content into the index file.
+ * Builds the default templates for displaying content.
  *
  *
  * @package  WordPress

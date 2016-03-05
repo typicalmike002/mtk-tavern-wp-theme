@@ -30,7 +30,7 @@ function mtk_tavern_setup() {
 	) );
 
 	// Adds support for a custom navigation menu.  More can be added.
-	register_nav_menu( 'primary', 'Navigation Menu' );
+	register_nav_menu( 'primary', 'Main Navigation' );
 
 	// Add support for thumbnails.
 	add_theme_support( 'post-thumbnails' );
@@ -75,10 +75,17 @@ function inject_scripts() {
 
 	// Script used to get a facebook share button.
 	wp_register_script( 'facebook', $js_dir . '/facebook.js', '', '', false );
-	wp_enqueue_script( 'facebook', '', '', '', false ); 
+	wp_enqueue_script( 'facebook', '', '', '', false );
+
+	// Styles for the lightbox plugin.
+	if ( is_page( 'Gallery' ) ) {
+		wp_register_style( 'lightbox-style', $js_libs . '/lightbox/src/css/lightbox.css' );
+		wp_enqueue_style( 'lightbox-style' );
+	}
 
 }
 add_action( 'wp_enqueue_scripts', 'inject_scripts' );
+
 
 
 

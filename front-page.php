@@ -28,8 +28,9 @@ $rotator_query = new WP_Query( $rotator_query_args );
 
 // Sets the coming soon data using facebook.
 include('classes/FacebookAPIConnect.php');
-$facebookAPI = new FacebookAPIConnect();
-$obj = json_decode( $facebookAPI->json, true ); 
+$facebookAPIConnect = new FacebookAPIConnect();
+
+$obj = $facebookAPIConnect->{'event_data'}();
 $coming_soon = $obj['data'][0];
 
 // Sets up the variables used for the coming soon section below.
@@ -48,11 +49,13 @@ get_header(); ?>
 	<ul class="bxslider bxslider_hidden">
 		<?php while ( $rotator_query->have_posts() ) : ?>
 			<?php $rotator_query->the_post(); ?>
-			<?php if ( wp_is_mobile() ) : ?>
-				<li style="background-image: url(<?php echo wp_get_attachment_image_src( $post->ID, 'small' )[0]; ?>);"></li>
-			<?php else : ?>
-				<li style="background-image: url(<?php echo wp_get_attachment_image_src( $post->ID, 'large' )[0]; ?>);"></li>
-			<?php endif; ?>
+			<a href="<?php echo esc_url( get_page_link( get_page_by_title( 'about' )->ID ) . 'gallery' ); ?>">
+				<?php if ( wp_is_mobile() ) : ?>
+					<li style="background-image: url(<?php echo wp_get_attachment_image_src( $post->ID, 'small' )[0]; ?>);"></li>
+				<?php else : ?>
+					<li style="background-image: url(<?php echo wp_get_attachment_image_src( $post->ID, 'large' )[0]; ?>);"></li>
+				<?php endif; ?>
+			</a>
 		<?php endwhile; ?>
 	</ul>
 </section>

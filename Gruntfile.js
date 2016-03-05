@@ -113,7 +113,8 @@ module.exports = function(grunt) {
 						main: 'modules/main',
 						jquery: 'bower_components/jquery-2.2.1.min/jquery-2.2.1.min',
 						lazyload: 'bower_components/jquery_lazyload/jquery.lazyload',
-						bxslider: 'bower_components/jquery.bxslider/jquery.bxslider.min'
+						bxslider: 'bower_components/jquery.bxslider/jquery.bxslider.min',
+						lightbox: 'bower_components/lightbox/dist/js/lightbox.min'
 					},
 					out: 'js/optimize.min.js'
 				}

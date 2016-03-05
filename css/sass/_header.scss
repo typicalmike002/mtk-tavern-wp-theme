@@ -63,7 +63,8 @@ nav#navigation_mobile {
 }
 
 nav#navigation ul li.current-menu-item a,
-nav#navigation_mobile ul li.current-menu-item a {
+nav#navigation_mobile ul li.current-menu-item a,
+nav#about_navigation li.current_page_item a {
 	color: $colorBrandLight;
 }
 
