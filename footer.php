@@ -50,7 +50,7 @@
 			</section>
 			<address class="footer_address">
 				<h3>Address</h3>
-				<p>30 E. Main St. MT Kisco, NY</p> 
+				<p>30 E. Main St. Mt Kisco, NY</p> 
 			</address>
 		</div>
 	</div>

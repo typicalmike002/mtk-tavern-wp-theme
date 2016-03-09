@@ -14,7 +14,7 @@ class Templates {
 
 	public function __construct () {
 
-		if ( is_admin() ) { //This class should only load in the admin section.
+		if ( is_admin() ) { 
 
 			add_action( 'admin_init', array( $this, 'admin_custom_input' ) );
 		}
@@ -24,32 +24,40 @@ class Templates {
 
 		global $pagenow;
 
-		if ( ! ( 'post.php' === $pagenow ) ) { return; /* Escape for all other sections of the admin. */ }
+		if ( ! ( 'post.php' === $pagenow ) ) { return; }
 
 
-		//GET or POST the post_ID number and ensure that its an int. 
+		//Don't continue if the post_ID is anything except an int.
 		$post_id = filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT )
 					? filter_input( INPUT_GET, 'post', FILTER_SANITIZE_NUMBER_INT )
 					: filter_input( INPUT_POST, 'post_ID', FILTER_SANITIZE_NUMBER_INT );
 		if ( !isset($post_id) ) { return; /* The Filter returned false so escape. */ } 
 
-		/**
-		 * Use a define name and compares the list of template files in the array to the currently 
-		 * loaded template set in the $template_filename variable above.  This define name is used 
-		 * to separate what should be done to these list of templates in the admin sections.
-		 */
 
+		// The currently loaded page template.
 		$template_filename = esc_url( get_post_meta( $post_id, '_wp_page_template', true ) );
 
-		//Loads meta form and post meta data for the contact us template.
+		// Defines various page_template filenames.
 		define('LOAD_CONTACT_FORM', json_encode( array(
 			'http://page_templates/contact-form.php'
 		) ) );
 
+		define('LOAD_FOOD_FORM', json_encode( array(
+			'http://page_templates/food.php'
+		) ) );
 
+		// Compares the currently loaded page template with various page_template filenames.
+		// Loads an admin template for pages that need customized input.
 		if ( in_array( $template_filename, json_decode( LOAD_CONTACT_FORM ) ) ) {
 
 			include 'templates/contact-form.php';
+		}
+
+
+		if ( in_array( $template_filename, json_decode( LOAD_FOOD_FORM ) ) ) {
+
+			include 'templates/create-food-menu.php';
+
 		}
 	}
 }

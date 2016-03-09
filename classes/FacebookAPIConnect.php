@@ -38,7 +38,7 @@ class FacebookAPIConnect {
 		$this->since_unix_timestamp = strtotime( $this->since_date );
 		$this->until_unix_timestamp = strtotime( $this->until_date );
 
-		$this->access_token = "CAACEdEose0cBABJDwn73WUP3DwfhNb4OPJCzOXbCQ8EfZCOxNARONuEQhQ21w1PY3AZBTMvMu74Ia1gnkDHRMvueNke373kGcRIWWJWc5xgu5g9tzg70FbcrZAeXsLXpZB7AlaUtuXSQJVoGXU5mivUUgFIQ5pgrR0PFYZAvkbKjtrBL0lKeZAmN34kS7dKhduHlrh7VLNpjOTj3nmcDZBsHn5a1cJ3YzIZD";
+		$this->access_token = "CAACEdEose0cBAOrOsx3Eyj86ZAqZCs6hY4wSZBhyggT1K9ZCyBs3O6r29tVZC58kS2ysRzk5eXp2ZBdx0txm7KdNWctpUOjwcJcVAHcfxKaCSZBcZCmHNG26nQfqJHWTsu7s6muvIbhrbMhZAiEbZAjSQHyBVoz8sZAfk0BBxcrDOA9eONg9jDUaVG0VCrKgnDMn7Bq6B5ADIpKjTFpPh97m5Xj5pZC82fKrsUUZD";
 
 		$this->fields = "id,name,description,timezone,start_time,cover";
 		$this->json_link = "https://graph.facebook.com/{$this->fb_page_id}/events/attending/?fields={$this->fields}&access_token={$this->access_token}&since={$this->since_unix_timestamp}&until={$this->until_unix_timestamp}";

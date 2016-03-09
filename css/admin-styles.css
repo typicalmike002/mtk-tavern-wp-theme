@@ -10,6 +10,10 @@
 	overflow: hidden;
 }
 
+.col_full {
+	width: 100%;
+}
+
 
 @media all and (min-width: 766px){
 
@@ -27,6 +31,8 @@ label {
 	font-weight: 600;
 }
 
-input {
-	width: 85%;	
+.sub_catagory,
+.food_items {
+	padding: 1em;
 }
+

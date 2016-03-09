@@ -90,31 +90,27 @@ add_action( 'wp_enqueue_scripts', 'inject_scripts' );
 
 
 if ( is_admin() ) {
-	/**
-	 * Loads custom styles into the wp-admin panal.  Most of these are used
-	 * inside the Templates Class below for displaying backend forms.
-	*/
-	function admin_stylesheet() {
-		wp_register_script( 'admin-styles', get_template_directory_uri() . '/css/admin-styles.css', false, '1.0.0' );
+	
+
+	function admin_inject_styles() {
+		wp_register_style( 'admin-styles', get_template_directory_uri() . '/css/admin-styles.css', false, '1.0.0' );
 		wp_enqueue_style( 'admin-styles' );
+
 	}
-	add_action( 'admin_enqueue_scripts', 'admin_stylesheet' );
+	add_action( 'admin_enqueue_scripts', 'admin_inject_styles' );
+	
+
+	/**
+	 * Class: Templates
+	 * 
+	 * @since MTK Tavern 1.0
+	 */
+
+	include( 'admin_templates/Templates.php' );
+	$template_controls = new Templates();
 }
 
 
-function test_footer(){
-	echo '<p>Test Passed</p>';
-}
-add_action('wp_footer', 'your_function', 100);
 
-
-/**
- * Class: Templates
- * 
- * @since MTK Tavern 1.0
- */
-
-include( 'admin_templates/Templates.php' );
-$template_controls = new Templates();
 
 ?>

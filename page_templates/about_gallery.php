@@ -44,7 +44,7 @@ get_header(); ?>
 
 	<div class="full_gallery">
 	<?php foreach ( $images as $key => $image ) : ?>
-		<?php if ( $key % 2 == 0 ) : ?>
+		<?php if ( $key % 3 == 0 ) : ?>
 			<div class="row gutters">
 		<?php endif; ?>
 			<div class="column gallery_spacing">
@@ -56,7 +56,7 @@ get_header(); ?>
 					</div>
 				</a>
 			</div>
-		<?php if ( $key % 2 == 1 ) : ?>
+		<?php if ( $key % 3 == 2 ) : ?>
 			</div>
 		<?php endif; ?>
 	<?php endforeach; ?>

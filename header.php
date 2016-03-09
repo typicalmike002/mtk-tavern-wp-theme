@@ -68,7 +68,7 @@
 
 				<!-- address -->
 				<address class="address">
-					<p>30 E. Main St. MT Kisco, NY</p> 
+					<p>30 E. Main St. MT Kisco, NY</p>
 					<p>(914) 218-3334</p>
 				</address>
 
