@@ -38,7 +38,7 @@ class FacebookAPIConnect {
 		$this->since_unix_timestamp = strtotime( $this->since_date );
 		$this->until_unix_timestamp = strtotime( $this->until_date );
 
-		$this->access_token = "CAACEdEose0cBAOrOsx3Eyj86ZAqZCs6hY4wSZBhyggT1K9ZCyBs3O6r29tVZC58kS2ysRzk5eXp2ZBdx0txm7KdNWctpUOjwcJcVAHcfxKaCSZBcZCmHNG26nQfqJHWTsu7s6muvIbhrbMhZAiEbZAjSQHyBVoz8sZAfk0BBxcrDOA9eONg9jDUaVG0VCrKgnDMn7Bq6B5ADIpKjTFpPh97m5Xj5pZC82fKrsUUZD";
+		$this->access_token = "CAACEdEose0cBAAyKWhJpyyMJIZCif7C5xpClzTyfzgFrSmDraZAd2rQZAZBVxMzDxtZBhg5Rbnp3CqgvgUC1bukLtWFrDUibItAyNck6QjGjdPDEZBZAtUSkpDkuoepAOjv0U2ctkXc45GQXymacw1Go7DzEl6ZC1NxeSUHgMmNwqwxRE2859npggd8RTuAXjMSddV2cSMN3s55TCYZARB0KFQ0RFz9mUeS4ZD";
 
 		$this->fields = "id,name,description,timezone,start_time,cover";
 		$this->json_link = "https://graph.facebook.com/{$this->fb_page_id}/events/attending/?fields={$this->fields}&access_token={$this->access_token}&since={$this->since_unix_timestamp}&until={$this->until_unix_timestamp}";
@@ -47,6 +47,7 @@ class FacebookAPIConnect {
 		$this->obj = json_decode( $this->json, true ); // 'true' returns an array.
 	}
 
+	// Reverses the events before returning the data.
 	public function event_data(){
 		$tmp = json_decode( $this->json, true );
 		$this->obj['data'] = array_reverse($tmp['data']);
