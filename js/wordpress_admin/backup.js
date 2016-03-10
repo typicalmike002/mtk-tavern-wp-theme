@@ -29,7 +29,7 @@ var food_menu = {
 	sub_category: 
 		'<label>Sub Category</label>'
 	+	'<input type="text" size="50" class="subCategoryDiv">'
-	+	'<input type="button" value="Add Sub Category" onClick="addInput(this);" class="subCategoryButton">'
+	+	'<input type="button" value="Add Sub Category" onClick="addInput(this);">'
 	+ 	'<input type="button" value="Remove Sub category" onClick="removeInput(this);">'
 	+ 	'<label>Price</label>'
 	+	'<input type="text" class="subCategoryPriceDiv">'
@@ -44,7 +44,7 @@ var food_menu = {
 	+	'<textarea rows="4" cols="50" class="foodItemDescriptionDiv"></textarea><br />'
 	+	'<label>Price</label>'
 	+	'<input type="text" class="foodItemPriceDiv"><br/>'
-	+	'<input type="button" value="Add Food Item" onClick="addInput(this);" class="foodItemButton">'
+	+	'<input type="button" value="Add Food Item" onClick="addInput(this);">'
 	+	'<input type="button" value="Remove Food Item" onClick="removeInput(this);">'
 };
 
@@ -54,24 +54,25 @@ window.onload = function() {
 	var main_div = document.getElementById('food_menu_form');
 	main_div.innerHTML = food_menu.wrapper;
 
+	// Used to add more categories dynamically (see the below loops).
+	var food_menu_div = document.getElementById('add_category');
+
 	// If WordPress passes this script a JSON object, loop through it and
 	// fill out the form as neccessary.  Please clean this section up...
 	var categories_obj = menu_object.menu_items;
 	if ( categories_obj ) {
+
+		// Loops through each category, breaking it down by sub category and food items.
 		for ( var key in categories_obj ) {
 			
 			if ( !categories_obj.hasOwnProperty(key) ) { continue; }
 
 			if ( categories_obj[key].category ) {
-				
-				// Adds a new category input div.
-				var menu_container_div = document.getElementById('add_category');
-				addInput( menu_container_div );
 
+				// Adds new category input elements automatically before setting it's value.
+				addInput( food_menu_div );
 				document.getElementsByClassName('categoryDiv')[key].value = categories_obj[key].category;
 
-				// Set sub category wrapper and set up the sub category object:
-				var sub_category_wrapper = document.getElementsByClassName('category')[key];
 				var sub_categories_obj = categories_obj[key]['sub-categories'];
 				if ( sub_categories_obj ) {
 
@@ -82,18 +83,15 @@ window.onload = function() {
 
 						if ( sub_categories_obj[sub_key]['sub-category'] ) {
 
-							// Only adds a sub category input element if there is more than one sub category.
-							var subCategoryDiv = sub_category_wrapper.getElementsByClassName('subCategoryButton')[0];
-							if ( sub_key !== '0' ) { addInput( subCategoryDiv ); }
+							var sub_category_div = document.getElementsByClassName('subCategoryDiv')[sub_key];
+							var sub_category_price_div = document.getElementsByClassName('subCategoryPriceDiv')[sub_key];
 
-							var sub_category_div = sub_category_wrapper.getElementsByClassName('subCategoryDiv')[sub_key];
-							var sub_category_price_div = sub_category_wrapper.getElementsByClassName('subCategoryPriceDiv')[sub_key];
+							// Only adds a sub category input element if there is more than one sub category.
+							if ( sub_key !== '0' ) { addInput( sub_category_div ); }
 							
 							sub_category_div.value = sub_categories_obj[sub_key]['sub-category'];
 							sub_category_price_div.value = sub_categories_obj[sub_key]['price'];
 
-							// Set food-item wrapper and set up the food-items object:
-							var food_items_wrapper = sub_category_wrapper.getElementsByClassName('sub_category')[sub_key];
 							var food_items_obj = sub_categories_obj[sub_key]['food-items'];
 							if ( food_items_obj ) {
 
@@ -104,17 +102,16 @@ window.onload = function() {
 
 									if ( food_items_obj[food_key]['food-item'] ) {
 										
-										// Only adds a new food-item input element if there is more than one food-item.
-										var foodItemButton = food_items_wrapper.getElementsByClassName('foodItemButton')[0];
-										if ( food_key !== '0' ) { addInput( foodItemButton ); }
-
-										var food_item_div = food_items_wrapper.getElementsByClassName('foodItemDiv')[food_key];
-										var food_item_description_div = food_items_wrapper.getElementsByClassName('foodItemDescriptionDiv')[food_key]
-										var food_item_price_div = food_items_wrapper.getElementsByClassName('foodItemPriceDiv')[food_key];
+										var food_item_div = document.getElementsByClassName('foodItemDiv')[food_key];
+										var food_item_description_div = document.getElementsByClassName('foodItemDescriptionDiv')[food_key]
+										var food_item_price_div = document.getElementsByClassName('foodItemPriceDiv')[food_key];
+										
+										// Only adds a food-item input element if there is more than one food-item.
+										if ( food_key !== '0' ) { addInput( food_item_div ); }
 
 										food_item_div.value = food_items_obj[food_key]['food-item'];
 										food_item_description_div.value = food_items_obj[food_key]['description'];
-										food_item_price_div.value = food_items_obj[food_key]['food-price'];
+										food_item_price_div.value = food_item_obj[food_key]['food-price'];
 
 									}
 								}
@@ -204,9 +201,6 @@ var addInput = function(div) {
 				category_index = removeBrackets( parent_div.querySelector('input[type=text]').getAttribute('name') ),
 				sub_category_index = parent_div.parentElement.getElementsByClassName('sub_category').length;
 
-				// The following effects all indexes and is needed so php's foreach loop starts at 0.
-				sub_category_index--;
-
 				// Uses the newly created div to filter for sub categories. 
 				[].filter.call(new_names, function(d){
 					return d.parentNode === new_input;
@@ -245,7 +239,6 @@ var addInput = function(div) {
 			var new_names = new_input.querySelectorAll('input[type=text]'),
 				sub_category_index = removeBrackets( new_input.previousSibling.querySelector('input[type=text]').getAttribute('name') );
 
-
 				// Adds a sub category index number to each food item.
 				[].forEach.call(new_names, function(d, i){
 
@@ -255,7 +248,7 @@ var addInput = function(div) {
 
 				// Adds a sub category index number to the descriptions.
 				new_input.querySelector('textarea')
-					.setAttribute("name", sub_category_index + '-description' + '[]');
+					.setAttribute("name", sub_category_index + '[]');
 
 		break;
 
@@ -272,3 +265,4 @@ var removeInput = function(div){
 function removeBrackets(str){
 	return str.replace( /\[\]/g, '');
 }
+
