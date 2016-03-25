@@ -9,13 +9,8 @@ define(function(){
 
 		toggleDiv.onchange = function(){
 			$(closeDiv).toggleClass(openDiv);
-<<<<<<< HEAD
-		};
-	};
-=======
 		}
 	}
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 	return Hamburger;
 });
