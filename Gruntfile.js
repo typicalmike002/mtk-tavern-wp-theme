@@ -100,7 +100,11 @@ module.exports = function(grunt) {
 		},
 
 		jshint: {
+<<<<<<< HEAD
 			all: ['Gruntfile.js', 'js/config.js', 'js/modules/*.js']
+=======
+			all: ['Gruntfile.js']
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 		},
 
 		requirejs: {
@@ -108,6 +112,7 @@ module.exports = function(grunt) {
 				options: {
 					baseUrl: 'js',
 					name: 'config',
+<<<<<<< HEAD
 					optimize: 'uglify',
 					paths: {
 						main: 'modules/main',
@@ -115,6 +120,15 @@ module.exports = function(grunt) {
 						lazyload: 'bower_components/jquery_lazyload/jquery.lazyload',
 						bxslider: 'bower_components/bxslider-4/dist/jquery.bxslider.min',
 						lightbox: 'bower_components/lightbox2/dist/js/lightbox.min'
+=======
+					optimize: 'none', // or 'uglify'
+					paths: {
+						main: 'modules/main',
+						jquery: 'bower_components/jquery-2.2.1.min/jquery-2.2.1.min',
+						lazyload: 'bower_components/jquery_lazyload/jquery.lazyload',
+						bxslider: 'bower_components/jquery.bxslider/jquery.bxslider.min',
+						lightbox: 'bower_components/lightbox/dist/js/lightbox.min'
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 					},
 					out: 'js/optimize.min.js'
 				}

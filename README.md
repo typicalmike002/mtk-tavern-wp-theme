@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MTK Tavern WordPress Theme
 ###### version 1.0.0
 
@@ -95,3 +96,9 @@ things easier on the developer.
 
 
 
+=======
+# mtk-tavern-wp-theme
+A custom WordPress theme that utilizes various custom admin page templates.  I often am in need of custom forms for the WordPress backend and decided to roll my own method of building templates that I think is less confusing to non WordPress users.  The idea that makes this different is instead of digging through options and copy/pasting shortcodes, this theme comes with a way for a PHP/WordPress developer to easily code their own html forms for a page on the back end.  The theme detects which form to load by comparing the currently loaded page template and then loading one of the admin templates
+
+Now any clever developer can further add customizations to their WordPress backend that can be easliy explained to clients who are often less tech savy.  This theme's strongest feature is its simple to add page templates that will effect how data is entered on the backend.  It's currently still a work in progress so feel free to comment or send me suggestions.  
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc

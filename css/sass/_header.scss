@@ -15,7 +15,10 @@ header#header {
 nav#navigation {
 
 	display: none;
+<<<<<<< HEAD
 	padding: 1em 0;
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 	ul {
 
@@ -84,7 +87,11 @@ nav#about_navigation li.current_page_item a {
 	z-index: 2;
 }
 
+<<<<<<< HEAD
 .mobile-icon_hamburger {
+=======
+button.mobile-icon_hamburger {
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	background: none;
 	border: 0;
 	padding: 0;
@@ -108,11 +115,14 @@ address.address {
 		text-align: left;
 		font-weight: 800;
 	}
+<<<<<<< HEAD
 
 }
 
 .non_caps {
 	text-transform: none;
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 }
 
 .address_container {

@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 section.about p:not(.hours_time) {
+=======
+section.about p {
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	text-align: justify;
 	text-justify: inter-word;
 }
 
+<<<<<<< HEAD
 section.about p{
 	line-height: $hundred*1.5;
 }
 
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 #about_navigation {
 	padding: 0;
 	margin: 0 auto;
@@ -30,10 +37,13 @@ section.about p{
 	}
 }
 
+<<<<<<< HEAD
 .about_featured-image {
 	text-align: center;
 }
 
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 .gallery_image,
 .gallery_spacing {	
 	width: 274px;
@@ -66,17 +76,21 @@ address.location_address {
 	padding: 1em 0;
 }
 
+<<<<<<< HEAD
 section.about_stage-setup {
 	object {
 		overflow: hidden;
 	}
 }
 
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 section.testimonial {
 	padding: 0 1em;
 }
 
 .testimonial_image {
+<<<<<<< HEAD
 	margin: 1em 0;
 	flex: 0 0 30% !important;
 }
@@ -84,6 +98,10 @@ section.testimonial {
 .hours_time p,
 .about_hours {
 	text-align: center;
+=======
+	flex: 0 !important;
+	margin: 1em 0;
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 }
 
 @media only screen and (min-width: $tabletWidth) {
@@ -95,17 +113,24 @@ section.testimonial {
 		li {
 			flex-grow: 1;
 			display: block;
+<<<<<<< HEAD
 			margin: 0 1em;
+=======
+			margin: 1em;
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 		}
 	}
 
 	.gallery_spacing {
 		margin: 0.225em;
 	}
+<<<<<<< HEAD
 
 
 	.about_featured-image {
 		float: left;
 		padding-right: 1.2em;
 	}
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 }

@@ -10,6 +10,7 @@
   "homepage": "mtktavern.com",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "jquery-2.2.1.min": "http://code.jquery.com/jquery-2.2.1.min.js",
     "html5shiv": "^3.7.3",
     "respond": "^1.4.2",
@@ -17,5 +18,8 @@
     "bxslider-4": "bxSlider#^4.2.5",
     "requirejs": "^2.2.0",
     "jquery_lazyload": "^1.9.1"
+=======
+    "jquery-2.2.1.min": "http://code.jquery.com/jquery-2.2.1.min.js"
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
   }
 }

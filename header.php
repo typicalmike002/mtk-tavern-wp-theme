@@ -9,15 +9,24 @@
  */
 ?>
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
+=======
+<html>
+<head>
+	<meta charset="<?php esc_attr( bloginfo( 'charset' ) ); ?>">
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="x-UA-Compatible" content-"IE=edge,chrome=1">
 	
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
+<<<<<<< HEAD
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 	<?php wp_head(); ?>
 
@@ -29,7 +38,11 @@
 	<!-- header -->
 	<header id="header" role="banner">
 
+<<<<<<< HEAD
 		<div class="row">
+=======
+		<div class="row gutters">
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 			<div class="column">
 
 				<div class="mobile-menu">
@@ -72,7 +85,10 @@
 				<address class="address">
 					<p>30 E. Main St. MT Kisco, NY</p>
 					<p>(914) 218-3334</p>
+<<<<<<< HEAD
 					<p class="non_caps">pam@mtktavern.com</p>
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 				</address>
 
 			</div>
@@ -87,7 +103,11 @@
 			) ); ?>
 		</nav>
 
+<<<<<<< HEAD
 		<div class="row">
+=======
+		<div class="row gutters">
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 			<div class="column">
 
 				<!-- page title -->

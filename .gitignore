@@ -3,6 +3,7 @@ node_modules
 
 # sass cache
 .sass-cache
+<<<<<<< HEAD
 
 # Bower Dependencies
 js/bower_components/
@@ -11,6 +12,8 @@ js/bower_components/
 .DS_Store
 .localized
 
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 =======
 *.log
 .htaccess

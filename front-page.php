@@ -30,14 +30,23 @@ $rotator_query = new WP_Query( $rotator_query_args );
 include('classes/FacebookAPIConnect.php');
 $facebookAPIConnect = new FacebookAPIConnect();
 
+<<<<<<< HEAD
 $event_data = $facebookAPIConnect->{'event_data'}();
 $coming_soon = $event_data[0];
+=======
+$obj = $facebookAPIConnect->{'event_data'}();
+$coming_soon = $obj['data'][0];
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 // Sets up the variables used for the coming soon section below.
 date_default_timezone_set($coming_soon['timezone']);
 $start_date = date( 'l, F d, Y', strtotime($coming_soon['start_time']));
 $start_time = date('g:i a', strtotime($coming_soon['start_time']));
+<<<<<<< HEAD
 $image = isset($coming_soon['cover']) ? $coming_soon['cover'] : "https://graph.facebook.com/{$fb_page_id}/picture?type=large";
+=======
+$image = isset($coming_soon['cover']['source']) ? $coming_soon['cover']['source'] : "https://graph.facebook.com/{$fb_page_id}/picture?type=large";
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 $eid = $coming_soon['id'];
 $name = $coming_soon['name'];
 $description = isset($coming_soon['description']) ? $coming_soon['description'] : "No description is avalible for this event.  Click details below for more information.";

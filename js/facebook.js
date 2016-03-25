@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // Script used by facebook for using its share button on the calendar sections.
+=======
+// Script used by facebook for using its share button.
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 (function(d, s, id) {
 	var js, fjs = d.getElementsByTagName(s)[0];

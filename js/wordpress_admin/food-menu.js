@@ -2,7 +2,15 @@
 
 // This file requires a 'menu_object' json object created by 'admin_templates/templates/create-food-menu.php'
 
+<<<<<<< HEAD
 var test_menu = JSON.stringify(menu_object.menu_items);	
+=======
+var test_menu = JSON.stringify(menu_object.menu_items);
+
+console.log(test_menu);
+
+
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 var food_menu = {
 
@@ -33,9 +41,17 @@ var food_menu = {
 	+ 	'</div>',
 
 	food_items:
+<<<<<<< HEAD
 		'<h3>Food Item</h3>'
 	+	'<label>Food Item</label>'
 	+	'<textarea rows="4" cols="50" class="foodItemDiv" required></textarea><br />'
+=======
+		'<h3>Food Items</h3>'
+	+	'<label>Food Item</label>'
+	+ 	'<input type="text" class="foodItemDiv">'
+	+	'<label>Description</label>'
+	+	'<textarea rows="4" cols="50" class="foodItemDescriptionDiv"></textarea><br />'
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	+	'<label>Price</label>'
 	+	'<input type="text" class="foodItemPriceDiv"><br/>'
 	+	'<input type="button" value="Add Food Item" onClick="addInput(this);" class="foodItemButton">'
@@ -103,9 +119,17 @@ window.onload = function() {
 										if ( food_key !== '0' ) { addInput( foodItemButton ); }
 
 										var food_item_div = food_items_wrapper.getElementsByClassName('foodItemDiv')[food_key];
+<<<<<<< HEAD
 										var food_item_price_div = food_items_wrapper.getElementsByClassName('foodItemPriceDiv')[food_key];
 
 										food_item_div.value = food_items_obj[food_key]['food-item'];
+=======
+										var food_item_description_div = food_items_wrapper.getElementsByClassName('foodItemDescriptionDiv')[food_key]
+										var food_item_price_div = food_items_wrapper.getElementsByClassName('foodItemPriceDiv')[food_key];
+
+										food_item_div.value = food_items_obj[food_key]['food-item'];
+										food_item_description_div.value = food_items_obj[food_key]['description'];
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 										food_item_price_div.value = food_items_obj[food_key]['food-price'];
 
 									}
@@ -162,6 +186,7 @@ var addInput = function(div) {
 					d.setAttribute("name", 'sub-category-' + category_index + isPrice + '[]');
 				});
 
+<<<<<<< HEAD
 				// Adds a sub category index number to the food item.
 				food_items_div.querySelector('textarea')
 					.setAttribute("name", 'sub-category-' + category_index + '-food-item-' + sub_category_index + '[]');
@@ -169,6 +194,21 @@ var addInput = function(div) {
 				// Adds a sub category index number to the food item's price.
 				food_items_div.querySelector('input[type=text]')
 					.setAttribute("name", 'sub-category-' + category_index + '-food-item-'  + sub_category_index + '-price[]');
+=======
+				// Adds a sub category index number to each food item.
+				[].filter.call(new_names, function(d){
+					return d.parentNode === food_items_div;
+				}).forEach(function(d, i){
+
+					var isPrice = i % 2 === 0 ? '' : '-price';
+					d.setAttribute("name", 'sub-category-' + category_index + '-food-item-'  + sub_category_index + isPrice + '[]');
+				});
+
+				// Adds a sub category index number to the descriptions.
+				food_items_div.querySelector('textarea')
+					.setAttribute("name", 'sub-category-' + category_index + '-food-item-' + sub_category_index + '-description' + '[]');
+
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 		break;
 
 		// Adds a sub category to the current category.
@@ -184,6 +224,7 @@ var addInput = function(div) {
 			// Appends the new div to the sub-category class.
 			new_input.className = "sub_category";
 			parent_div.parentNode.appendChild(new_input);
+<<<<<<< HEAD
 			
 			// Sets index numbers that are used by the php file for retriving values to save to database.
 			var	category_index = removeBrackets( parent_div.querySelector('input[type=text]').getAttribute('name') ),
@@ -209,6 +250,38 @@ var addInput = function(div) {
 			// Adds a sub category index number to the new food item's price.
 			food_items_div.querySelector('input[type=text]')
 				.setAttribute("name", category_index + '-food-item-' + sub_category_index + '-price[]');
+=======
+
+			// Filters the results and adds the appropriate name value to all sub category elements.
+			var new_names = food_items_div.parentNode.querySelectorAll('input[type=text]'),
+				category_index = removeBrackets( parent_div.querySelector('input[type=text]').getAttribute('name') ),
+				sub_category_index = parent_div.parentElement.getElementsByClassName('sub_category').length;
+
+				// The following effects all indexes and is needed so php's foreach loop starts at 0.
+				sub_category_index--;
+
+				// Uses the newly created div to filter for sub categories. 
+				[].filter.call(new_names, function(d){
+					return d.parentNode === new_input;
+				}).forEach(function(d, i){
+
+					var isPrice = i % 2 === 0 ? '' : '-price';
+					d.setAttribute("name", category_index + isPrice + '[]');
+				});
+
+				// Adds a sub category index number to each food item.
+				[].filter.call(new_names, function(d){
+					return d.parentNode === food_items_div;
+				}).forEach(function(d, i){
+
+					var isPrice = i % 2 === 0 ? '' : '-price';
+					d.setAttribute("name", category_index + '-food-item-' + sub_category_index + isPrice + '[]');
+				});
+
+				// Adds a sub category index number to the descriptions.
+				food_items_div.querySelector('textarea')
+					.setAttribute("name", category_index + '-food-item-' + sub_category_index + '-description' + '[]');
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 		break;
 
@@ -222,6 +295,7 @@ var addInput = function(div) {
 			new_input.className = "food_items";
 			parent_div.parentNode.appendChild(new_input);
 
+<<<<<<< HEAD
 			// Adds the same sub category index from the first food items to all food items added after the fact.
 			var sub_category_index = removeBrackets( new_input.previousSibling
 				.querySelector('textarea').getAttribute('name') );
@@ -233,6 +307,23 @@ var addInput = function(div) {
 			// Adds a sub category index number to the new food item price.
 			new_input.querySelector('input[type=text]')
 				.setAttribute("name", sub_category_index + '-price[]' );
+=======
+			// Adds the sub category index from the first food items to all food items added after the fact.
+			var new_names = new_input.querySelectorAll('input[type=text]'),
+				sub_category_index = removeBrackets( new_input.previousSibling.querySelector('input[type=text]').getAttribute('name') );
+
+
+				// Adds a sub category index number to each food item.
+				[].forEach.call(new_names, function(d, i){
+
+					var isPrice = i % 2 === 0 ? '' : '-price';
+					d.setAttribute("name", sub_category_index + isPrice + '[]');
+				});
+
+				// Adds a sub category index number to the descriptions.
+				new_input.querySelector('textarea')
+					.setAttribute("name", sub_category_index + '-description' + '[]');
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 		break;
 

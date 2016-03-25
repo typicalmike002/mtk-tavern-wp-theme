@@ -44,7 +44,11 @@ section.event_date p {
 .event_share {
 	@extend %navigationGradient;
 	border-radius: 1em;
+<<<<<<< HEAD
 	width: $hundred/2;
+=======
+	width: 50%;
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	float: left;
 	margin: 0 1em;
 }
@@ -62,21 +66,43 @@ a.event_link {
 	text-align: center;
 }
 
+<<<<<<< HEAD
 .event_image,
 .event_coming-soon_image {
 	height: 200px;
+=======
+.event_coming-soon_image {
+	height: 325px;
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
+<<<<<<< HEAD
 
 @media only screen and (min-width: $tabletWidth) {
 	
+=======
+.event_image {
+	height: 225px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+// Override facebooks style for the share buttons //
+.event_share {
+
+}
+
+@media only screen and (min-width: $tabletWidth) {
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	.last_event {
 		width: 50%;
 		margin: 0 auto;
 	}
+<<<<<<< HEAD
 
 	.event_image,
 	.event_coming-soon_image {
@@ -90,4 +116,6 @@ a.event_link {
 	.event_coming-soon_image {
 		height: 220px;
 	}
+=======
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 }

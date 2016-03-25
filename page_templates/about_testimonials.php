@@ -14,7 +14,11 @@ get_header(); ?>
 			<!-- Sub Navigation -->
 			<nav id="about_navigation" role="navigation">
 				<?php wp_list_pages( array(
+<<<<<<< HEAD
 					'child_of' => 10, // Set equal to the About page $post->ID
+=======
+					'child_of' => 14, // Set equal to the About page $post->ID
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 					'title_li' => '' // Removes the "pages" heading.
 				)); ?>
 			</nav>

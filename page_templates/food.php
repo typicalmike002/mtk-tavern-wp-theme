@@ -4,6 +4,7 @@ Template Name: Food
 
 */
 
+<<<<<<< HEAD
 $categories = get_post_meta( $post->ID, 'food_menu_values' )[0];
 
 get_header(); ?>
@@ -49,4 +50,23 @@ get_header(); ?>
 
 </section>
 
+=======
+get_header(); ?>
+
+<section class="about_gallery">
+
+	<div class="row gutters">
+		<div class="column">
+			<!-- Sub Navigation -->
+			<nav id="about_navigation" role="navigation">
+				<?php wp_list_pages( array(
+					'child_of' => 14, // Set equal to the About page $post->ID
+					'title_li' => '' // Removes the "pages" heading.
+				)); ?>
+			</nav>
+		</div>
+	</div>
+
+</section>
+>>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 <?php get_footer(); ?>
