@@ -2,7 +2,6 @@
 // This file requires a 'menu_object' json object created by 'admin_templates/templates/stage-setup.php'
 
 var test = JSON.stringify( stage_setup_object.stage_setup_items );
-console.log(test);
 
 var html = {
 	
