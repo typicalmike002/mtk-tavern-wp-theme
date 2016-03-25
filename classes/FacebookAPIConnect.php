@@ -2,14 +2,11 @@
 /**
  * For a detailed step by step guide, see: https://www.codeofaninja.com/2011/07/display-facebook-events-to-your-website.html
  *
-<<<<<<< HEAD
  * This file has been modified from the above guide.  Now it's in class form, the necessary API calls are built into the 
  * constructor, and it contains a sorting function so events appear in order.  After invoking this class with new, you
  * can retrieve the data in array form by calling the public "event_data" function from outside this class. 
  *     
  *
-=======
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
  * @return $json Contents of the MTK Calendar from Facebook.
  * @uses public event_data to return the events in reverse order so sooner events are displayed first.
  * @since MTK Tavern 1.0
@@ -33,16 +30,13 @@ class FacebookAPIConnect {
 	private $json;
 
 	private $obj;
-<<<<<<< HEAD
 	private $events;
 
 	public function __construct () {
 		
 		$this->events = array(); // Blank data array that is returned to the user.
-=======
 
 	public function __construct () {
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 		$this->fb_page_id = "Secret FB Page ID Number Goes Here";
 		$this->fb_app_id = "Secret FB App ID Number Goes Here";
@@ -91,7 +85,6 @@ class FacebookAPIConnect {
 }
 
 ?>
-=======
 	// Reverses the events before returning the data.
 	public function event_data(){
 		$tmp = json_decode( $this->json, true );
@@ -101,4 +94,3 @@ class FacebookAPIConnect {
 }
 
 ?>
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
