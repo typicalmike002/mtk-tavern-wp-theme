@@ -5,39 +5,21 @@
 	background-color: $colorSecondary;
 	background-size: $hundred 215px;
 	padding: 0 1em;
-<<<<<<< HEAD
 	padding-bottom: 2.5em;
-=======
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 }
 
 .padding-1 {
 	padding: 1em;
-<<<<<<< HEAD
 	align-self: center;
 }
 
 @media only screen and (min-width: $tabletWidth) {
-=======
-}
-
-@media only screen and (min-width: $tabletWidth) {
-
-	.gutters {
-		padding: 1em 0 0 1em;
-	}
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 		
 	.row {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-<<<<<<< HEAD
 		padding: 0.5em 0;
-=======
-		margin: 0;
-		padding: 0;
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	}
 
 	.column {
@@ -45,7 +27,6 @@
 		width: $hundred;
 	}
 
-<<<<<<< HEAD
 	.column_fill {
 		flex: 1;
 	}
@@ -62,8 +43,6 @@
 		flex: 0 0 $hundred/4;
 	}
 
-=======
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	.align-top {
 		align-items: flex-start;
 	}
