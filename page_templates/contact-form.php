@@ -3,7 +3,6 @@
 Template Name: Contact Form
 */
 
-<<<<<<< HEAD
 global $post;
 
 // Response Generation Function
@@ -115,9 +114,5 @@ get_header(); ?>
 
 	</div><!-- row -->
 </section>
-=======
-get_header(); ?>
-
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 <?php get_footer(); ?>
