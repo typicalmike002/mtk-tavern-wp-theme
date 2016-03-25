@@ -1,0 +1,95 @@
+//--------MTK Font--------//
+%primaryFont {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+%headerFont {
+	font-family: Bondoni MT, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+	font-style: normal;
+	font-weight: 800;
+}
+
+//--------MTK Gradients--------//
+%backgroundGradient {
+
+	background: radial-gradient(ellipse at center 100%, 
+		$colorSecondary 0%, 
+		$colorSecondary 79%,
+		$colorBrandLight 84%,
+		$colorBrandMiddle 90%,
+		$colorBrandDark 94%,
+		$colorBrandDark 100%
+	);
+	background-repeat: no-repeat;
+}
+
+%navigationGradient {
+	background: linear-gradient(170Deg, 
+		$color1 0%,
+		$color1 48%,
+		lighten($color1, 15%) 50%,
+		lighten($color1, 15%) 100%
+	);
+}
+
+//--------Nav Button--------//
+// This is for Mobile. //
+%navigationButton {
+	width: 60px;
+	height: 45px;
+	position: relative;
+	transform: rotate(0deg);
+	transition: .3s ease-in;
+	cursor: pointer;
+
+	span {
+		display: block;
+		position: absolute;
+		height: 9px;
+		width: 100%;
+		background: $color1;
+		border-radius: 9px;
+		opacity: 1;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+		
+		&:nth-child(1) {
+			top: 0;
+			transform-origin: left center;
+		}
+
+		&:nth-child(2) {
+			top: 18px;
+			transform-origin: left center;
+		}
+
+		&:nth-child(3) {
+			top: 36px;
+			transform-origin: left center;
+		}
+	}
+}
+
+%navigationButton.open {
+	
+	span {
+
+		&:nth-child(1) {
+			transform: rotate(45deg);
+			top: -3px;
+			left: 8px;
+		}
+		&:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+			top: 39px;
+			left: 8px;
+		}
+	}
+}

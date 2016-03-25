@@ -1,0 +1,12 @@
+/*
+ * ie7.css
+ *
+ * Adds the box-sizing: border-box property to IE7 and below:
+*/
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	*behavior: url(http://localhost/clients/mtktavern/wp-content/themes/mtktavern/css/polyfills/boxsizing.htc);
+}

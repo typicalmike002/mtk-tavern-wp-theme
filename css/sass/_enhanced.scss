@@ -1,0 +1,20 @@
+//--------Document-Level--------//
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+//--------Embedded Content--------//
+svg:not(:root) {
+	overflow: hidden;
+}
+
+
+//--------Grouping-Content--------//
+pre {
+	overflow: auto;
+}

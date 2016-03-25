@@ -1,0 +1,66 @@
+/*
+	The footer uses its own version of the grid because it follows different rules on mobile views.
+*/
+
+footer#footer {
+	margin: 0 auto;
+	clear: both;
+	color: $colorSecondary;
+
+	h2, h3, p {
+		text-align: center;
+		margin: 0;
+	}
+
+	h2, h3 {
+		margin: 0.5em 0;
+	}
+
+	p {
+		margin: 1em 0;
+	}
+
+	h2 {
+		font-size: $hundred*2;
+	}
+
+	h3 {
+		font-size: $hundred*1.5;
+	}
+
+	.row {
+		&:nth-child(2) {
+			margin: 1em 0;
+		}
+	}
+}
+
+.icon {
+	text-align: center;
+	display: flex;
+
+	img {
+		width: 25px;
+		height: 24px;
+		margin: 0 0.5em;
+		border-radius: 32px;
+		padding: 3px;
+		background: $colorSecondary;
+	
+	}
+
+	.line {
+		flex: 0.5;
+		height: 1px;
+		align-self: center;
+		background: $colorSecondary;
+	}
+}
+
+//--Hides h2 headers from mobile view--//
+@media only screen and (max-width: $tabletWidth) {
+	
+	footer#footer header h2{
+		display: none;
+	}	
+}

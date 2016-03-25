@@ -1,0 +1,48 @@
+/*!
+Theme Name: MTK Tavern
+Theme URI: n/a
+Author: typicalmike002
+Author URI: https://github.com/typicalmike002/mtk-tavern-wp-theme
+Version: 1.0
+License: MIT
+License URI: https://opensource.org/licenses/MIT
+Text Domain: mtktavern
+*/
+
+//--------Viewpoint Widths--------//
+@-webkit-viewport{width:device-width;}
+@-moz-viewport{width:device-width;}
+@-ms-viewport{width:device-width;}
+@-o-viewport{width:device-width;}
+@viewport{width:device-width;}
+
+//--------Comapss Libraries--------//
+@import "compass/css3";
+
+//--------Globals--------//
+@import "variables";
+@import "mixins";
+
+//--------Structure--------//
+@import "foundation";
+@import "grid";
+
+//--------Content--------//
+@import "header";
+
+@import "content";
+@import "templates/front-page";
+@import "templates/about";
+@import "templates/calendar";
+@import "templates/food";
+@import "templates/contact";
+
+@import "footer";
+
+
+@media only all {
+
+	//----Enhanced Structure----//
+	@import "enhanced";
+
+}

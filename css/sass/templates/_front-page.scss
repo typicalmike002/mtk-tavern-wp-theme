@@ -1,0 +1,74 @@
+.rotator {
+	padding: 1em 0;
+
+	ul.bxslider {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			width: $hundred;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 225px;
+		}
+	}
+
+	.bx-pager {
+		text-align: center;
+	}
+
+	.bx-pager-item {
+		display: inline-block;
+		padding: 0.3em;
+	}
+
+	// Changes slider to dot instead of numbers
+	a.bx-pager-link {
+		text-indent: -99999px;
+		display: block;
+		width: 10px;
+		height: 10px;
+		outline: 0;
+		border-radius: 5px;
+		background: $color1;
+	}
+
+	a.bx-pager-link.active {
+		background: $colorBrandDark;
+	}
+}
+
+.featured-event {
+	text-align: center;
+	padding-bottom: 1em;
+
+	.column {
+		padding: 0 1em;
+	}
+}
+
+@media only screen and(min-width: $tabletWidth) {
+	.rotator {
+		ul.bxslider {
+
+			li {
+				height: 325px;
+			}
+
+		}
+	}
+}
+
+@media only screen and(min-width: $desktopWidth) {
+	.rotator {
+		ul.bxslider {
+
+			li {
+				height: 425px;
+			}
+
+		}
+	}
+}

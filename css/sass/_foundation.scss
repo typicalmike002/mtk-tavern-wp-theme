@@ -1,0 +1,200 @@
+//--------Document-Level--------//
+html {
+	@extend %primaryFont;
+	text-size-adjust: 100%;
+}
+
+body { 
+	background: lighten($color1, 15%);
+	margin: 0 auto;
+	font-size: $mobileFont;
+	color: $color1;
+}
+
+@media only screen and (min-width: $tabletWidth){
+
+	body {
+		font-size: $tabletFont;
+	}
+}
+
+@media only screen and (min-width: $desktopWidth){
+
+	body {
+		font-size: $desktopFont;
+	}
+}
+
+
+address {
+	font-style: normal;
+}
+
+
+
+//--------HTML5--------//
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+
+
+//--------Links--------//
+a {
+	color: $colorPrimary;
+	text-decoration: none;
+	
+	&:hover,
+	&:active,
+	&:focus {
+		color: darken($colorPrimary, 15%);
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+
+	&:focus img {
+		border: 1px $colorPrimary solid;
+	}
+}
+
+
+
+//--------Headers--------//
+h1, 
+h2,
+h3,
+h4,
+h5 {
+	@extend %headerFont;
+	margin: 0;
+}
+
+
+//--------Navigation--------//
+nav ul {
+	list-style-type: none;
+}
+
+
+//--------Embedded Content--------//
+img {
+	border: 0;
+}
+
+
+
+//--------Forms--------//
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+input[type="text"],
+input[type="email"],
+textarea[type="text"] {
+	font-size: $hundred*1.3;
+	padding: 0.3em;
+	border-radius: 0.3em;
+	box-shadow: 0 0 1px $color1;
+	width: $hundred;
+}
+
+textarea[type="text"] {
+	height: 140px;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	@include box-sizing( content-box );
+}
+
+fieldset {
+	border: 1px solid #BBB;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+//--------Tables--------//
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}

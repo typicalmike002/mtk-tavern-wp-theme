@@ -1,0 +1,25 @@
+{
+  "name": "mtk-tavern",
+  "version": "1.0.0",
+  "description": "A theme for the mtktavern.com website.",
+  "main": "Gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-autoprefixer": "3.0.4",
+    "grunt-combine-mq": "0.9.0",
+    "grunt-contrib-compass": "1.1.0",
+    "grunt-contrib-cssmin": "0.14.0",
+    "grunt-contrib-jshint": "1.0.0",
+    "grunt-contrib-requirejs": "0.4.4",
+    "grunt-contrib-uglify": "0.11.1",
+    "grunt-contrib-watch": "0.6.1",
+    "grunt-git": "0.3.7",
+    "load-grunt-tasks": "3.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "typicalmike002",
+  "license": "MIT"
+}

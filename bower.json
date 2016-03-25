@@ -1,0 +1,21 @@
+{
+  "name": "mtk-tavern",
+  "description": "A theme for the mtktavern.com website.",
+  "main": "Gruntfile.js",
+  "authors": [
+    "typicalmike002"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "mtktavern.com",
+  "private": true,
+  "dependencies": {
+    "jquery-2.2.1.min": "http://code.jquery.com/jquery-2.2.1.min.js",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2",
+    "lightbox2": "^2.8.2",
+    "bxslider-4": "bxSlider#^4.2.5",
+    "requirejs": "^2.2.0",
+    "jquery_lazyload": "^1.9.1"
+  }
+}

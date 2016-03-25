@@ -1,0 +1,38 @@
+/** 
+ * Defines custom styles that are used only in the WordPress backend.
+*/
+
+/* Simple grid for form layouts  */
+
+.row {
+	margin: 0 auto;
+	clear: both;
+	overflow: hidden;
+}
+
+.col_full {
+	width: 100%;
+}
+
+
+@media all and (min-width: 766px){
+
+	.col_hlf {
+		float: left;
+		width: 50%;
+	}
+
+}
+
+
+label {
+	display: block;
+	cursor: default;
+	font-weight: 600;
+}
+
+.sub_catagory,
+.food_items {
+	padding: 1em;
+}
+

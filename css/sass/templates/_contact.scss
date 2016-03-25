@@ -1,0 +1,73 @@
+section.contact-form {
+	
+	img {
+		display: none;
+		width: $hundred*0.9;
+	}
+
+	.column_thrd {
+		text-align: right;
+		align-self: flex-start;
+	}
+}
+
+.contact_name {
+	padding-right: 0;
+}
+
+
+.error,
+.success {
+	padding: 0.5em;
+}
+
+.error {
+	border: 1px solid $colorPrimary;
+	color: $colorPrimary;
+	border-radius: 3px;
+}
+
+.success {
+	border: 1px solid green;
+	color: green;
+	border-radius: 3px;
+}
+
+
+form span {
+	color: $colorPrimary;
+}
+
+input,
+textarea {
+	border: none;
+}
+
+.send_message{
+	@extend %navigationGradient;
+	border-radius: 3em;
+	display: inline-block;
+
+	input[type=submit] {
+		padding: 0.5em;
+		background: none;
+		color: $colorSecondary;
+		font-weight: 800;
+		width: 170px;
+	}
+}
+
+@media only screen and (min-width: $tabletWidth){
+
+	section.contact-form {
+
+		img {
+			display: initial;
+		}
+	}
+
+	.contact_name {
+		padding-right: 1em;
+	}
+}
+
