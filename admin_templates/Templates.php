@@ -46,13 +46,10 @@ class Templates {
 			'http://page_templates/food.php'
 		) ) );
 
-<<<<<<< HEAD
 		define('LOAD_STAGE_SETUP_FORM', json_encode( array(
 			'http://page_templates/about_stage-setup.php'
 		) ) );
 
-=======
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 		// Compares the currently loaded page template with various page_template filenames.
 		// Loads an admin template for pages that need customized input.
 		if ( in_array( $template_filename, json_decode( LOAD_CONTACT_FORM ) ) ) {
@@ -66,14 +63,11 @@ class Templates {
 			include 'templates/create-food-menu.php';
 
 		}
-<<<<<<< HEAD
 
 		if ( in_array( $template_filename, json_decode( LOAD_STAGE_SETUP_FORM ) ) ) {
 
 			include 'templates/stage-setup.php';
 
 		}
-=======
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	}
 }
