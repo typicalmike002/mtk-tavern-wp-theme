@@ -3,7 +3,6 @@ node_modules
 
 # sass cache
 .sass-cache
-<<<<<<< HEAD
 
 # Bower Dependencies
 js/bower_components/
