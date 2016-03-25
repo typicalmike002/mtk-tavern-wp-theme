@@ -41,11 +41,6 @@ function load_food_menu_form() {
 	$values = get_post_meta( $post->ID, 'food_menu_values', true );
 	$count = count($values);
 
-<<<<<<< HEAD
-=======
-	print_r($values);
-
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	?><div id="food_menu_form"><!-- SEE js/wordpress_admin/food-menu.js --></div><?php 
 }
 
@@ -85,25 +80,19 @@ function save_forms( $post_id ) {
 			);
 
 			$food_items = isset( $_POST['sub-category-' . $cat_key . '-food-item-' . $sub_cat_key] ) ? $_POST['sub-category-' . $cat_key . '-food-item-' . $sub_cat_key] : array();
-<<<<<<< HEAD
-=======
 			$descriptions = isset( $_POST['sub-category-' . $cat_key . '-food-item-' . $sub_cat_key . '-description'] ) ? $_POST['sub-category-' . $cat_key . '-food-item-' . $sub_cat_key . '-description'] : array();
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 			$food_item_prices = isset( $_POST['sub-category-' . $cat_key . '-food-item-' . $sub_cat_key . '-price'] ) ? $_POST['sub-category-' . $cat_key . '-food-item-' . $sub_cat_key . '-price'] : array();
 
 			// Adds all food items and their prices/descriptions that are listed for each of the sub categories.
 			foreach ( $food_items as $food_item_key => $food_item_value ) {
 
-<<<<<<< HEAD
 				$food_menu[$cat_key]['sub-categories'][$sub_cat_key]['food-items'][$food_item_key] = array(
 					'food-item' => sanitize_text_field( $food_item_value ),
-=======
 				//print_r( $food_item_prices );
 
 				$food_menu[$cat_key]['sub-categories'][$sub_cat_key]['food-items'][$food_item_key] = array(
 					'food-item' => sanitize_text_field( $food_item_value ),
 					'description' => isset( $descriptions[$food_item_key] ) ? sanitize_text_field( $descriptions[$food_item_key] ) : '',
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 					'food-price' => isset( $food_item_prices[$food_item_key] ) ? sanitize_text_field( $food_item_prices[$food_item_key] ) : ''
 				);
 			}
