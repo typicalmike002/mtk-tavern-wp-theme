@@ -9,15 +9,9 @@ Link : www.codeofaninja.com/2011/07/display-facebook-events-to-your-website.html
 include dirname(__FILE__) . '/../classes/FacebookAPIConnect.php';
 $facebookAPIConnect = new FacebookAPIConnect();
 
-<<<<<<< HEAD
 $event_data = $facebookAPIConnect->{'event_data'}();
 
 $event_count = count($event_data);
-=======
-$obj = $facebookAPIConnect->{'event_data'}();
-
-$event_count = count($obj['data']);
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 $i = 0;
 
@@ -27,7 +21,6 @@ get_header(); ?>
 	<?php while ($i < $event_count) : 
 
 		// Set timezone.
-<<<<<<< HEAD
 		date_default_timezone_set($event_data[$i]['timezone']);
 
 		$start_date = date( 'l, F d, Y', strtotime($event_data[$i]['start_time']));
@@ -38,18 +31,6 @@ get_header(); ?>
 		$eid = $event_data[$i]['id'];
 		$name = $event_data[$i]['name'];
 		$description = isset($event_data[$i]['description']) ? $event_data[$i]['description'] : "No description is avalible for this event.  Click details below for more information.";
-=======
-		date_default_timezone_set($obj['data'][$i]['timezone']);
-
-		$start_date = date( 'l, F d, Y', strtotime($obj['data'][$i]['start_time']));
-		$start_time = date('g:i a', strtotime($obj['data'][$i]['start_time']));
-
-		$image = isset($obj['data'][$i]['cover']['source']) ? $obj['data'][$i]['cover']['source'] : "https://graph.facebook.com/{$fb_page_id}/picture?type=large";
-
-		$eid = $obj['data'][$i]['id'];
-		$name = $obj['data'][$i]['name'];
-		$description = isset($obj['data'][$i]['description']) ? $obj['data'][$i]['description'] : "No description is avalible for this event.  Click details below for more information.";
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 
 		?>
 
@@ -138,11 +119,7 @@ get_header(); ?>
 									<!-- Event Image -->
 									<div class="event_image lazy"
 									data-original="<?php echo $image; ?>"
-<<<<<<< HEAD
 									style="background-image: url(<?php echo $image; ?>);"></div>
-=======
-									style="background-image: url(<?php echo $image; ?>); width: 100%; height: 225px;"></div>
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 								</div>
 							</div>
 
