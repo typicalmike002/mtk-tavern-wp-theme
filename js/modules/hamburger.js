@@ -9,8 +9,8 @@ define(function(){
 
 		toggleDiv.onchange = function(){
 			$(closeDiv).toggleClass(openDiv);
-		}
-	}
+		};
+	};
 
 	return Hamburger;
 });

@@ -33,10 +33,6 @@ class FacebookAPIConnect {
 	private $events;
 
 	public function __construct () {
-		
-		$this->events = array(); // Blank data array that is returned to the user.
-
-	public function __construct () {
 
 		$this->fb_page_id = "Secret FB Page ID Number Goes Here";
 		$this->fb_app_id = "Secret FB App ID Number Goes Here";
@@ -79,15 +75,6 @@ class FacebookAPIConnect {
 	// Local Sorting function that returns the data 
 	private function sort_timestamp_callback($a, $b) {
 		return ( strtotime($a['start_time']) - strtotime($b['start_time']) );
-	}
-}
-
-?>
-	// Reverses the events before returning the data.
-	public function event_data(){
-		$tmp = json_decode( $this->json, true );
-		$this->obj['data'] = array_reverse($tmp['data']);
-		return $this->obj;
 	}
 }
 

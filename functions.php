@@ -63,7 +63,7 @@ function inject_scripts() {
 	$js_libs = $js_dir . '/bower_components';
 
 	// Registers requirejs.
-	wp_enqueue_script( 'requirejs', $js_libs . '/requirejs/require.min.js', '', '', true);
+	wp_enqueue_script( 'requirejs', $js_libs . '/requirejs/require.js', '', '', true);
 	wp_register_script( 'optimize', $js_dir . '/optimize.min.js', 'requirejs', '', true );
 
 	// Passes theme's directory path to requirejs.
@@ -97,7 +97,6 @@ function inject_scripts() {
 	// Add box-sizing: border-box; support to IE7 and below:
 	wp_enqueue_style( 'ie7_style', get_stylesheet_directory_uri() . '/css/ie7.css', array( 'style' ) );
 	wp_style_add_data( 'ie7_style', 'conditional', 'lte IE 7' );
-	}
 
 }
 add_action( 'wp_enqueue_scripts', 'inject_scripts' );

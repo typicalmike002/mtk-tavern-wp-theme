@@ -42,14 +42,12 @@ Text Domain: mtktavern
   background: radial-gradient(ellipse at center 100%, #f1eacb 0%, #f1eacb 79%, #f2d112 84%, #e69f23 90%, #d62128 94%, #d62128 100%);
   background-repeat: no-repeat;
 }/* line 28, sass/_mixins.scss */nav#navigation ul li,nav#navigation_mobile ul li,#about_navigation li,.event_details,.event_share,.send_message {
-}/* line 28, sass/_mixins.scss */nav#navigation ul li,nav#navigation_mobile ul li,#about_navigation li,.event_details,.event_share {
   background: -webkit-gradient(linear, left top, left bottom, from(170Deg), color-stop(0%, #000000), color-stop(48%, #000000), color-stop(50%, #262626), to(#262626));
   background: -webkit-linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
   background: -moz-linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
   background: -o-linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
   background: linear-gradient(170Deg, #000000 0%, #000000 48%, #262626 50%, #262626 100%);
 }/* line 39, sass/_mixins.scss */.mobile-icon_hamburger {
-}/* line 39, sass/_mixins.scss */button.mobile-icon_hamburger {
   width: 60px;
   height: 45px;
   position: relative;
@@ -64,7 +62,6 @@ Text Domain: mtktavern
   transition: .3s ease-in;
   cursor: pointer;
 }/* line 47, sass/_mixins.scss */.mobile-icon_hamburger span {
-}/* line 47, sass/_mixins.scss */button.mobile-icon_hamburger span {
   display: block;
   position: absolute;
   height: 9px;
@@ -85,7 +82,6 @@ Text Domain: mtktavern
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }/* line 59, sass/_mixins.scss */.mobile-icon_hamburger span:nth-child(1) {
-}/* line 59, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(1) {
   top: 0;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -93,7 +89,6 @@ Text Domain: mtktavern
   -o-transform-origin: left center;
   transform-origin: left center;
 }/* line 64, sass/_mixins.scss */.mobile-icon_hamburger span:nth-child(2) {
-}/* line 64, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(2) {
   top: 18px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -101,7 +96,6 @@ Text Domain: mtktavern
   -o-transform-origin: left center;
   transform-origin: left center;
 }/* line 69, sass/_mixins.scss */.mobile-icon_hamburger span:nth-child(3) {
-}/* line 69, sass/_mixins.scss */button.mobile-icon_hamburger span:nth-child(3) {
   top: 36px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -109,7 +103,6 @@ Text Domain: mtktavern
   -o-transform-origin: left center;
   transform-origin: left center;
 }/* line 80, sass/_mixins.scss */.open.mobile-icon_hamburger span:nth-child(1) {
-}/* line 80, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -121,10 +114,6 @@ Text Domain: mtktavern
   width: 0%;
   opacity: 0;
 }/* line 89, sass/_mixins.scss */.open.mobile-icon_hamburger span:nth-child(3) {
-}/* line 85, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(2) {
-  width: 0%;
-  opacity: 0;
-}/* line 89, sass/_mixins.scss */button.open.mobile-icon_hamburger span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -192,14 +181,6 @@ Text Domain: mtktavern
 }/* line 152, sass/_foundation.scss */input {
   line-height: normal;
 }/* line 156, sass/_foundation.scss */input[type="checkbox"],input[type="radio"] {
-}/* line 127, sass/_foundation.scss */button[disabled],html input[disabled] {
-  cursor: default;
-}/* line 132, sass/_foundation.scss */button::-moz-focus-inner,input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}/* line 138, sass/_foundation.scss */input {
-  line-height: normal;
-}/* line 142, sass/_foundation.scss */input[type="checkbox"],input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -207,9 +188,6 @@ Text Domain: mtktavern
 }/* line 162, sass/_foundation.scss */input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }/* line 167, sass/_foundation.scss */input[type="search"] {
-}/* line 148, sass/_foundation.scss */input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}/* line 153, sass/_foundation.scss */input[type="search"] {
   -webkit-appearance: textfield;
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
@@ -229,21 +207,6 @@ Text Domain: mtktavern
   border-collapse: collapse;
   border-spacing: 0;
 }/* line 197, sass/_foundation.scss */td,th {
-}/* line 158, sass/_foundation.scss */fieldset {
-  border: 1px solid #BBB;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}/* line 164, sass/_foundation.scss */legend {
-  border: 0;
-  padding: 0;
-}/* line 169, sass/_foundation.scss */textarea {
-  overflow: auto;
-}/* line 173, sass/_foundation.scss */optgroup {
-  font-weight: bold;
-}/* line 178, sass/_foundation.scss */table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}/* line 183, sass/_foundation.scss */td,th {
   padding: 0;
 }/* line 3, sass/_grid.scss */#wrap {
   background-color: #f1eacb;
@@ -258,8 +221,6 @@ Text Domain: mtktavern
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
-}/* line 10, sass/_grid.scss */.padding-1 {
-  padding: 1em;
 }/* line 1, sass/_header.scss */header#header {
   margin: 0 auto;
 }/* line 4, sass/_header.scss */header#header h1 {
@@ -276,11 +237,6 @@ Text Domain: mtktavern
   -moz-border-radius: 1em;
   border-radius: 1em;
 }/* line 30, sass/_header.scss */nav#navigation_mobile {
-}/* line 21, sass/_header.scss */nav#navigation ul li {
-  -webkit-border-radius: 1em;
-  -moz-border-radius: 1em;
-  border-radius: 1em;
-}/* line 29, sass/_header.scss */nav#navigation_mobile {
   position: fixed;
   background: rgba(241, 234, 203, 0.5);
   display: -webkit-box;
@@ -309,11 +265,6 @@ Text Domain: mtktavern
   padding: 1em 0;
   margin: 0;
 }/* line 48, sass/_header.scss */nav#navigation_mobile ul li {
-}/* line 42, sass/_header.scss */nav#navigation_mobile ul {
-  width: 100%;
-  padding: 1em 0;
-  margin: 0;
-}/* line 47, sass/_header.scss */nav#navigation_mobile ul li {
   -webkit-border-radius: 1em;
   -moz-border-radius: 1em;
   border-radius: 1em;
@@ -322,7 +273,6 @@ Text Domain: mtktavern
   width: 50%;
   margin: 0 auto;
 }/* line 56, sass/_header.scss */nav#navigation_mobile ul li a {
-}/* line 55, sass/_header.scss */nav#navigation_mobile ul li a {
   display: block;
   padding: 1em;
   margin: 2em 0;
@@ -332,11 +282,6 @@ Text Domain: mtktavern
 }/* line 72, sass/_header.scss */#mobile-icon {
   display: none;
 }/* line 76, sass/_header.scss */.mobile-menu {
-}/* line 65, sass/_header.scss */nav#navigation ul li.current-menu-item a,nav#navigation_mobile ul li.current-menu-item a,nav#about_navigation li.current_page_item a {
-  color: #f2d112;
-}/* line 71, sass/_header.scss */#mobile-icon {
-  display: none;
-}/* line 75, sass/_header.scss */.mobile-menu {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -367,21 +312,6 @@ Text Domain: mtktavern
   font-style: initial;
   text-transform: uppercase;
 }/* line 105, sass/_header.scss */address.address p {
-}/* line 81, sass/_header.scss */.mobile-menu_container {
-  position: relative;
-  z-index: 2;
-}/* line 86, sass/_header.scss */button.mobile-icon_hamburger {
-  background: none;
-  border: 0;
-  padding: 0;
-}/* line 92, sass/_header.scss */button.mobile-icon_hamburger label {
-  display: block;
-  width: 100%;
-  height: 100%;
-}/* line 100, sass/_header.scss */address.address {
-  font-style: initial;
-  text-transform: uppercase;
-}/* line 104, sass/_header.scss */address.address p {
   margin: 0.3em 0;
   font-size: 140%;
   text-align: left;
@@ -391,9 +321,6 @@ Text Domain: mtktavern
 }/* line 118, sass/_header.scss */.address_container {
   width: 100%;
 }/* line 122, sass/_header.scss */.social-media_container {
-}/* line 112, sass/_header.scss */.address_container {
-  width: 100%;
-}/* line 116, sass/_header.scss */.social-media_container {
   max-width: 275px;
   margin: 0 auto;
   display: -webkit-box;
@@ -416,11 +343,6 @@ Text Domain: mtktavern
   padding: 0;
   margin: 0;
 }/* line 9, sass/templates/_front-page.scss */.rotator ul.bxslider li {
-}/* line 2, sass/templates/_front-page.scss */.rotator ul.bxslider {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}/* line 7, sass/templates/_front-page.scss */.rotator ul.bxslider li {
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -434,12 +356,7 @@ Text Domain: mtktavern
 }/* line 22, sass/templates/_front-page.scss */.rotator .bx-pager-item {
   display: inline-block;
   padding: 0.3em;
-}/* line 16, sass/templates/_front-page.scss */.rotator .bx-pager {
-  text-align: center;
-}/* line 20, sass/templates/_front-page.scss */.rotator .bx-pager-item {
-  display: inline-block;
-  padding: 0.3em;
-}/* line 26, sass/templates/_front-page.scss */.rotator a.bx-pager-link {
+}/* line 28, sass/templates/_front-page.scss */.rotator a.bx-pager-link {
   text-indent: -99999px;
   display: block;
   width: 10px;
@@ -466,21 +383,6 @@ Text Domain: mtktavern
   margin: 0 auto;
   width: 100%;
 }/* line 15, sass/templates/_about.scss */#about_navigation li {
-}/* line 36, sass/templates/_front-page.scss */.rotator a.bx-pager-link.active {
-  background: #d62128;
-}/* line 41, sass/templates/_front-page.scss */.featured-event {
-  text-align: center;
-  padding-bottom: 1em;
-}/* line 45, sass/templates/_front-page.scss */.featured-event .column {
-  padding: 0 1em;
-}/* line 1, sass/templates/_about.scss */section.about p {
-  text-align: justify;
-  text-justify: inter-word;
-}/* line 6, sass/templates/_about.scss */#about_navigation {
-  padding: 0;
-  margin: 0 auto;
-  width: 100%;
-}/* line 11, sass/templates/_about.scss */#about_navigation li {
   margin: 1em auto;
   display: inline-block;
   width: 49%;
@@ -489,7 +391,6 @@ Text Domain: mtktavern
   -moz-border-radius: 1em;
   border-radius: 1em;
 }/* line 23, sass/templates/_about.scss */#about_navigation li a {
-}/* line 19, sass/templates/_about.scss */#about_navigation li a {
   display: block;
   padding: 0.5em;
   text-align: center;
@@ -501,10 +402,6 @@ Text Domain: mtktavern
   width: 274px;
   height: 200px;
 }/* line 43, sass/templates/_about.scss */.gallery_image {
-}/* line 29, sass/templates/_about.scss */.gallery_image,.gallery_spacing {
-  width: 274px;
-  height: 200px;
-}/* line 35, sass/templates/_about.scss */.gallery_image {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -518,7 +415,6 @@ Text Domain: mtktavern
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }/* line 50, sass/templates/_about.scss */.gallery_image:hover {
-}/* line 42, sass/templates/_about.scss */.gallery_image:hover {
   -webkit-filter: sepia(0%);
   filter: sepia(0%);
   -webkit-transform: scale(1.1);
@@ -538,30 +434,14 @@ Text Domain: mtktavern
 }/* line 75, sass/templates/_about.scss */section.testimonial {
   padding: 0 1em;
 }/* line 79, sass/templates/_about.scss */.testimonial_image {
-  margin: 1em 0;
-  -webkit-box-flex: 0 !important;
-  -webkit-flex: 0 0 30% !important;
-  -moz-box-flex: 0 !important;
-  -ms-flex: 0 0 30% !important;
-  flex: 0 0 30% !important;
-}/* line 84, sass/templates/_about.scss */.hours_time p,.about_hours {
-  text-align: center;
-}/* line 48, sass/templates/_about.scss */.gallery_spacing {
-  margin: 0 auto;
-  overflow: hidden;
-}/* line 52, sass/templates/_about.scss */.gallery_spacing a {
-  display: block;
-}/* line 57, sass/templates/_about.scss */address.location_address {
-  padding: 1em 0;
-}/* line 61, sass/templates/_about.scss */section.testimonial {
-  padding: 0 1em;
-}/* line 65, sass/templates/_about.scss */.testimonial_image {
   -webkit-box-flex: 0 !important;
   -webkit-flex: 0 !important;
   -moz-box-flex: 0 !important;
   -ms-flex: 0 !important;
   flex: 0 !important;
   margin: 1em 0;
+}/* line 84, sass/templates/_about.scss */.hours_time p,.about_hours {
+  text-align: center;
 }/* line 1, sass/templates/_calendar.scss */section.calendar {
   padding-bottom: 1em;
 }/* line 5, sass/templates/_calendar.scss */section.calendar .row_align-top {
@@ -612,16 +492,6 @@ Text Domain: mtktavern
   text-align: center;
 }/* line 65, sass/templates/_calendar.scss */.event_image,.event_coming-soon_image {
   height: 200px;
-}/* line 65, sass/templates/_calendar.scss */.event_coming-soon_image {
-  height: 325px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}/* line 72, sass/templates/_calendar.scss */.event_image {
-  height: 225px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -713,40 +583,6 @@ Text Domain: mtktavern
   width: 25px;
   height: 24px;
   margin: 0 0.5em;
-}/*
-	The footer uses its own version of the grid because it follows different rules on mobile views.
-*//* line 5, sass/_footer.scss */#footer {
-  margin: 0 auto;
-  clear: both;
-  color: #f1eacb;
-}/* line 10, sass/_footer.scss */#footer h2,#footer h3 {
-  text-align: center;
-  margin: 0;
-  font-size: 150%;
-}/* line 16, sass/_footer.scss */#footer p {
-  margin: 0;
-}/* line 20, sass/_footer.scss */#footer .column {
-  padding: 0.6em 0;
-}/* line 24, sass/_footer.scss */#footer .row:nth-child(2) {
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -moz-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  padding: 0.5em 0;
-}/* line 29, sass/_footer.scss */#footer .column:nth-child(odd) {
-  background: #404040;
-}/* line 33, sass/_footer.scss */#footer .column:nth-child(even) {
-  background: #595959;
-}/* line 38, sass/_footer.scss */section.hours {
-  text-align: center;
-}/* line 42, sass/_footer.scss */p.hours_time {
-  padding: 0.5em 0;
-}/* line 46, sass/_footer.scss */section.icon {
-  text-align: center;
-}/* line 49, sass/_footer.scss */section.icon img {
-  width: 66px;
-  height: 64px;
   -webkit-border-radius: 32px;
   -moz-border-radius: 32px;
   border-radius: 32px;
@@ -763,13 +599,6 @@ Text Domain: mtktavern
   -ms-flex-item-align: center;
   align-self: center;
   background: #f1eacb;
-}/* line 58, sass/_footer.scss */section.copyright {
-  text-align: center;
-}/* line 62, sass/_footer.scss */address.footer_address {
-  text-align: center;
-}/* line 66, sass/_footer.scss */section.footer_phone {
-  text-align: center;
-  padding-bottom: 1em;
 }
 
 @media only all {
@@ -792,9 +621,6 @@ Text Domain: mtktavern
 /* line 16, sass/_foundation.scss */  body {
     font-size: 0.9em;
   }/* line 18, sass/_grid.scss */  .row {
-  }/* line 16, sass/_grid.scss */  .gutters {
-    padding: 1em 0 0 1em;
-  }/* line 20, sass/_grid.scss */  .row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -810,9 +636,6 @@ Text Domain: mtktavern
     flex-wrap: wrap;
     padding: 0.5em 0;
   }/* line 25, sass/_grid.scss */  .column {
-    margin: 0;
-    padding: 0;
-  }/* line 28, sass/_grid.scss */  .column {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -moz-box-flex: 1;
@@ -844,14 +667,12 @@ Text Domain: mtktavern
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
   }/* line 46, sass/_grid.scss */  .align-top {
-  }/* line 33, sass/_grid.scss */  .align-top {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
     -moz-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
   }/* line 50, sass/_grid.scss */  #wrap {
-  }/* line 37, sass/_grid.scss */  #wrap {
     -webkit-background-size: 100% 175px;
     -moz-background-size: 100% 175px;
     -o-background-size: 100% 175px;
@@ -861,11 +682,6 @@ Text Domain: mtktavern
   }/* line 159, sass/_header.scss */  nav#navigation {
     display: block;
   }/* line 162, sass/_header.scss */  nav#navigation ul {
-  }/* line 149, sass/_header.scss */  header#header {
-    max-width: 640px;
-  }/* line 153, sass/_header.scss */  nav#navigation {
-    display: block;
-  }/* line 156, sass/_header.scss */  nav#navigation ul {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -879,7 +695,6 @@ Text Domain: mtktavern
     padding: 0;
     margin: 0 0.2em;
   }/* line 168, sass/_header.scss */  nav#navigation ul li {
-  }/* line 162, sass/_header.scss */  nav#navigation ul li {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-box-flex: 1;
@@ -891,7 +706,6 @@ Text Domain: mtktavern
     -moz-border-radius: 1em;
     border-radius: 1em;
   }/* line 174, sass/_header.scss */  nav#navigation ul li a {
-  }/* line 168, sass/_header.scss */  nav#navigation ul li a {
     display: block;
     padding: 0.5em;
     font-weight: 800;
@@ -916,26 +730,6 @@ Text Domain: mtktavern
   }/* line 215, sass/_header.scss */  .address_container {
     width: 275px;
   }/* line 219, sass/_header.scss */  .social-media_container {
-  }/* line 178, sass/_header.scss */  nav#navigation_mobile {
-    display: none;
-  }/* line 182, sass/_header.scss */  .mobile-menu {
-    display: initial;
-  }/* line 186, sass/_header.scss */  .logo_image {
-    width: auto;
-  }/* line 190, sass/_header.scss */  .mobile-menu_container {
-    display: none;
-  }/* line 194, sass/_header.scss */  .logo_image {
-    height: 100px;
-    width: 322px;
-    background: url("images/logo-medium.png") no-repeat;
-  }/* line 200, sass/_header.scss */  address.address {
-    border-top: 0.2em solid #000;
-    border-bottom: 0.2em solid #000;
-  }/* line 204, sass/_header.scss */  address.address p {
-    text-align: right;
-  }/* line 209, sass/_header.scss */  .address_container {
-    width: 275px;
-  }/* line 213, sass/_header.scss */  .social-media_container {
     margin: 0;
     display: initial;
     max-width: initial;
@@ -945,9 +739,6 @@ Text Domain: mtktavern
   }/* line 56, sass/templates/_front-page.scss */  .rotator ul.bxslider li {
     height: 325px;
   }/* line 91, sass/templates/_about.scss */  #about_navigation {
-  }/* line 54, sass/templates/_front-page.scss */  .rotator ul.bxslider li {
-    height: 325px;
-  }/* line 72, sass/templates/_about.scss */  #about_navigation {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -959,7 +750,6 @@ Text Domain: mtktavern
     -ms-flex-pack: center;
     justify-content: center;
   }/* line 95, sass/templates/_about.scss */  #about_navigation li {
-  }/* line 76, sass/templates/_about.scss */  #about_navigation li {
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -moz-box-flex: 1;
@@ -983,12 +773,6 @@ Text Domain: mtktavern
     display: initial;
   }/* line 69, sass/templates/_contact.scss */  .contact_name {
     padding-right: 1em;
-    margin: 1em;
-  }/* line 83, sass/templates/_about.scss */  .gallery_spacing {
-    margin: 0.225em;
-  }/* line 85, sass/templates/_calendar.scss */  .last_event {
-    width: 50%;
-    margin: 0 auto;
   }
 }
 
@@ -996,7 +780,6 @@ Text Domain: mtktavern
 /* line 23, sass/_foundation.scss */  body {
     font-size: 1em;
   }/* line 56, sass/_grid.scss */  #wrap {
-  }/* line 43, sass/_grid.scss */  #wrap {
     -webkit-background-size: 100% 225px;
     -moz-background-size: 100% 225px;
     -o-background-size: 100% 225px;
@@ -1017,26 +800,11 @@ Text Domain: mtktavern
     height: 425px;
   }/* line 89, sass/templates/_calendar.scss */  .event_image,.event_coming-soon_image {
     height: 220px;
-  }/* line 223, sass/_header.scss */  header#header {
-    max-width: 845px;
-  }/* line 227, sass/_header.scss */  .logo_image {
-    height: 135px;
-    width: 422px;
-    background: url("images/logo-large.png") no-repeat;
-  }/* line 233, sass/_header.scss */  address.address p {
-    font-size: 175%;
-  }/* line 237, sass/_header.scss */  .address_container {
-    width: 420px;
-  }/* line 13, sass/_content.scss */  #main {
-    max-width: 845px;
-  }/* line 66, sass/templates/_front-page.scss */  .rotator ul.bxslider li {
-    height: 425px;
   }
 }
 
 @media only screen and (max-width: 640px) {
 /* line 131, sass/_header.scss */  nav#navigation_mobile {
-/* line 125, sass/_header.scss */  nav#navigation_mobile {
     opacity: 0;
     z-index: -1;
     -webkit-transition: z-index 0.3s step-end, opacity 0.3s ease-in;
@@ -1046,9 +814,6 @@ Text Domain: mtktavern
   }/* line 136, sass/_header.scss */  nav#navigation_mobile a {
     pointer-events: none;
   }/* line 141, sass/_header.scss */  #mobile-icon:checked +
-  }/* line 130, sass/_header.scss */  nav#navigation_mobile a {
-    pointer-events: none;
-  }/* line 135, sass/_header.scss */  #mobile-icon:checked +
   nav#navigation_mobile {
     z-index: 1;
     opacity: 1;
@@ -1061,8 +826,5 @@ Text Domain: mtktavern
     pointer-events: auto;
   }/* line 63, sass/_footer.scss */  footer#footer header h2 {
     display: none;
-  }/* line 141, sass/_header.scss */  #mobile-icon:checked +
-  nav#navigation_mobile a {
-    pointer-events: auto;
   }
 }

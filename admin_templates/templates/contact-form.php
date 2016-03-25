@@ -37,31 +37,7 @@ function load_social_media_form() {
 		<label name="email_name"><p>Emails will be sent to the following email.</p></label>
 		<input type="email" required name="email_name" class="email_name" value="<?php echo esc_attr( $values['email'] ); ?>">
 	</form>
-	//Grabs the data saved in the post_meta.
-	$values = get_post_meta( $post->ID, 'social_media_urls', true );
-	?>
 
-	<!-- HTML Form -->
-	<div class="row">
-		<div class="col_hlf">
-			<label for="facebook"><p>Facebook URL</p></label>
-			<input type="url"
-				name="facebook"
-				value="<?php echo $values['facebook']; ?>"
-				pattern="https?://.+"
-				placeholder="http://example.com"
-				title="URL Format: http://example.com">
-		</div>
-		<div class="col_hlf">
-			<label for="instagram"><p>Instagram URL</p></label>
-			<input type="url"
-				name="instagram"
-				value="<?php echo $values['instagram']; ?>"
-				pattern="https?://.+"
-				placeholder="http://example.com"
-				title="URL Format: http://example.com">
-		</div>
-	</div>
 <?php }
 
 function save_forms ( $post_id ) {
@@ -76,12 +52,6 @@ function save_forms ( $post_id ) {
 
 	update_post_meta( $post_id, 'email_address', array( 
 		'email' =>  sanitize_text_field( $_POST['email_name'] )
-	) );
-
-	//Saves the data to the post_meta 
-	update_post_meta( $post_id, 'social_media_urls', array(
-		'facebook'	=>	sanitize_text_field ( $_POST['facebook'] ),
-		'instagram' =>	sanitize_text_field ( $_POST['instagram'] )
 	) );
 }
 
