@@ -1,5 +1,5 @@
 # MTK Tavern WordPress Theme
-###### version 1.0.0
+###### version 1.0.1
 
 Custom WP Theme for the MTK Tavern website built with some custom backend templates and some custom plugins.  Secret tokens used for connecting to the facebook API have been removed so the calendar might not work out of the box.
 
