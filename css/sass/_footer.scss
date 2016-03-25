@@ -2,16 +2,11 @@
 	The footer uses its own version of the grid because it follows different rules on mobile views.
 */
 
-<<<<<<< HEAD
 footer#footer {
-=======
-#footer {
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 	margin: 0 auto;
 	clear: both;
 	color: $colorSecondary;
 
-<<<<<<< HEAD
 	h2, h3, p {
 		text-align: center;
 		margin: 0;
@@ -68,65 +63,4 @@ footer#footer {
 	footer#footer header h2{
 		display: none;
 	}	
-=======
-	h2, h3 {
-		text-align: center;
-		margin: 0;
-		font-size: $hundred*1.5;
-	}
-
-	p {
-		margin: 0;
-	}
-
-	.column {
-		padding: 0.6em 0;
-	}
-
-	.row:nth-child(2) {
-		align-items: stretch;
-		padding: 0.5em 0;
-	}
-
-	.column:nth-child(odd) {
-		background: lighten($color1, 25%);
-	}
-
-	.column:nth-child(even) {
-		background: lighten($color1, 35%);
-	}
-}
-
-section.hours {
-	text-align: center;
-}
-
-p.hours_time {
-	padding: 0.5em 0;
-}
-
-section.icon {
-	text-align: center;
-
-	img {
-		width: 66px;
-		height: 64px;
-		border-radius: 32px;
-		padding: 3px;
-		background: $colorSecondary;
-	}
-}
-
-section.copyright {
-	text-align: center;
-}
-
-address.footer_address {
-	text-align: center;
-}
-
-section.footer_phone {
-	text-align: center;
-	padding-bottom: 1em;
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
 }
