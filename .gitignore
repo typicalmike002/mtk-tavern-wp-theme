@@ -12,9 +12,6 @@ js/bower_components/
 .DS_Store
 .localized
 
-=======
->>>>>>> 7b8fa3dc106727de504c15bb5eaac298df4f42bc
-=======
 *.log
 .htaccess
 sitemap.xml
