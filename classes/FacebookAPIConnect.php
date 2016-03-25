@@ -56,8 +56,6 @@ class FacebookAPIConnect {
 		$this->json = file_get_contents( $this->json_link );
 		$this->obj = json_decode( $this->json, true ); // 'true' returns an array.
 	}
-
-<<<<<<< HEAD
 	// Return the data retrieved in the correct order.
 	public function event_data(){
 		$tmp = json_decode( $this->json, true );
