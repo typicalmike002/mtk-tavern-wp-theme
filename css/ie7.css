@@ -8,5 +8,5 @@
 *:before,
 *:after {
 	box-sizing: border-box;
-	*behavior: url(http://localhost/clients/mtktavern/wp-content/themes/mtktavern/css/polyfills/boxsizing.htc);
+	*behavior: url(http://localhost/clients/mtktavern/wp-content/test-site/themes/mtktavern/css/polyfills/boxsizing.htc);
 }
